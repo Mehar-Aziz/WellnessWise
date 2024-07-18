@@ -8,14 +8,14 @@ nav {
     color: #61dafb;
     font-family: "Trirong", serif;
     position: relative;
-    top: 15px;
+    top: 5px;
   }
   
   nav ul {
     list-style-type: none;
     padding: 0;
     position: relative;
-    top: -40px;
+    top: -30px;
   }
   
   nav ul li {
@@ -67,8 +67,8 @@ nav {
 }
 
 .button-17:hover {
-  background: #F6F9FE;
-  color: #174ea6;
+  background-color: #61dafb;
+  color: #282c34;
 }
 
 .button-17:active {
