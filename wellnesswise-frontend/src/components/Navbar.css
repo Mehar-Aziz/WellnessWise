@@ -1,0 +1,24 @@
+nav {
+    background-color: #282c34;
+    padding: 1rem;
+  }
+  
+  nav h1 {
+    color: #61dafb;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 1rem;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
