@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import './Login.css'
+import { useNavigate } from "react-router-dom"; 
 
 const Login = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -14,6 +15,8 @@ const Login = () => {
         // Reset form fields
         setEmail("");
         setPassword("");
+
+        navigate("/")
       } else {
         // Mock unsuccessful login action
         console.log("Error")
