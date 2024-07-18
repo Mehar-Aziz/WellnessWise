@@ -3,13 +3,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Trirong", serif;
+  display: flexbox;
 }
 
 .footer {
-  position: fixed;
-  bottom: -100px;
-  margin-left: 615px;
-  transform: translate(-50%, -50%);
+  position: relative;
+  bottom: 0;
   max-width: 1280px;
   width: 100%;
   background: #10182F;
