@@ -7,8 +7,10 @@ function Navbar() {
             <h1>WellnessWise</h1>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/login">Login</a></li>
-                <li><a href="/register">Register</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <button>Make an appointment</button>
             </ul>
         </nav>
     );
