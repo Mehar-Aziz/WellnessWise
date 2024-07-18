@@ -3,10 +3,13 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer"; 
 
 function App() {
-  return(
-    <div className="App">
-      <Navbar/>
-      <Footer/>
+  return (
+    <div id="root">
+      <div className="App">
+        <Navbar />
+        {/* Your main content here */}
+      </div>
+      <Footer />
     </div>
   );
 }
