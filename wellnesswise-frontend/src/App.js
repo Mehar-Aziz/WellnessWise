@@ -11,13 +11,12 @@ function App() {
       <div className="App">
         <Navbar />
         <Routes>
-          {/*<Route path="/" exact component={Home} />*/}
+          {/*<Route path="/" exact element={<Home />} />*/}
           <Route path="/login" element={<Login />} />
           {/* Define other routes for different pages/components */}
         </Routes>
-      
+        <Footer />
       </div>
-      <Footer />
     </div>
     </Router>
   );
