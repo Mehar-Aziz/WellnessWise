@@ -6,12 +6,12 @@
 }
 
 .footer {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  position: fixed;
+  bottom: -100px;
+  margin-left: 615px;
   transform: translate(-50%, -50%);
   max-width: 1280px;
-  width: 95%;
+  width: 100%;
   background: #10182F;
   border-radius: 6px;
 }
