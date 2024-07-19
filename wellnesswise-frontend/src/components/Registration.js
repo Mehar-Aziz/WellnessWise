@@ -32,10 +32,10 @@ const Registration = () => {
   return (
     <div className="container">
       <div className="wrapper">
-        <div className="title"><span>Registration Form</span></div>
+        <div className="title"><span>SignUp Form</span></div>
         <form onSubmit={handleSubmit}>
         <div className="row">
-            <i className="fas fa-user"></i>
+            <i className="fas fa-person"></i>
             <input
               type="text"
               placeholder="Full Name"
@@ -55,7 +55,7 @@ const Registration = () => {
             />
           </div>
           <div className="row">
-            <i className="fas fa-user"></i>
+            <i className="fas fa-phone"></i>
             <input
               type="number"
               placeholder="Phone Number"
@@ -65,7 +65,7 @@ const Registration = () => {
             />
           </div>
           <div className="row">
-            <i className="fas fa-user"></i>
+            <i className="fas fa-home"></i>
             <input
               type="text"
               placeholder="Address"
@@ -91,7 +91,7 @@ const Registration = () => {
   </label>
 </div>
 <div className="row button">
-            <input type="submit" value="Register" />
+            <input type="submit" value="SignUp" />
           </div>
           
         </form>
