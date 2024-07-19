@@ -50,6 +50,7 @@
 // export default Login;
 import React, { useState } from 'react';
 import './Login.css'; // Import your CSS file for styling
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   const [emailOrPhone, setEmailOrPhone] = useState('');
@@ -91,11 +92,11 @@ const Login = () => {
               required
             />
           </div>
-          <div className="pass"><a href="#">Forgot password?</a></div>
+          <div className="pass"><a href="#forgot">Forgot password?</a></div>
           <div className="row button">
             <input type="submit" value="Login" />
           </div>
-          <div className="signup-link">Not a member? <a href="#">Signup now</a></div>
+          <div className="signup-link">Not a member? <Link to="/register" >Signup now</Link></div>
         </form>
       </div>
     </div>

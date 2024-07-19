@@ -1,0 +1,27 @@
+.terms {
+    display: block;
+    align-items: center;
+    padding-left: 30px;
+    font-size: 14px;
+    color: #333;
+}
+
+.terms input[type="checkbox"] {
+    accent-color: #007BFF; 
+    position: relative;
+    left: -175px;
+    top: 22px;
+    margin-right: 10px;
+    width: 20px; 
+    height: 20px;
+    cursor: pointer;
+}
+
+.terms a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
