@@ -7,7 +7,7 @@
 }
 
 .terms input[type="checkbox"] {
-    accent-color: #007BFF; 
+    accent-color: #D3D3D3; 
     position: relative;
     left: -175px;
     top: 22px;
@@ -18,7 +18,7 @@
 }
 
 .terms a {
-    color: #007BFF;
+    color: #D3D3D3;
     text-decoration: none;
 }
 
