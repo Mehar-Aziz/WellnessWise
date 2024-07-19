@@ -1,8 +1,13 @@
 import React from 'react';
 import './Home.css';
 import './HomeBackground.scss';
+//import { Link } from 'react-router-dom';
+
 
 function Home() {
+
+
+
     return (
         <div>
             {/* messafe */}
@@ -11,10 +16,10 @@ function Home() {
             <h1>Welcome to Wellness Wise</h1>
             <p>Your journey to a healthier, happier life begins here. At Wellness Wise, we’re dedicated to helping you achieve optimal well-being with our comprehensive health and wellness solutions.</p>
             <div className='buttonPad'>
-            <button className="cta-button">Discover More</button>
+            <button className="cta-button" >Discover More</button>
             <br />
             <br />
-           <button className='cta-button'>Book an Appointment</button>
+    <button className='cta-button'>Book an Appointment</button>
             </div>
             </div>
             </div>
