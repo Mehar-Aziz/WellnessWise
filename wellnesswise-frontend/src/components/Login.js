@@ -70,7 +70,7 @@ const Login = () => {
   return (
     <div className="container">
       <div className="wrapper">
-        <div className="title"><span>Login Form</span></div>
+        <div className="title"><span>LOGIN</span></div>
         <form onSubmit={handleSubmit}>
           <div className="row">
             <i className="fas fa-user"></i>
@@ -94,7 +94,7 @@ const Login = () => {
           </div>
           <div className="pass"><a href="#forgot">Forgot password?</a></div>
           <div className="row button">
-            <input type="submit" value="Login" />
+            <input type="submit" value="SIGN IN" />
           </div>
           <div className="signup-link">Not a member? <Link to="/register" >Signup now</Link></div>
         </form>

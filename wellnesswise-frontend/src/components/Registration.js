@@ -32,7 +32,7 @@ const Registration = () => {
   return (
     <div className="container">
       <div className="wrapper">
-        <div className="title"><span>SignUp Form</span></div>
+        <div className="title"><span>CREATE ACCOUNT</span></div>
         <form onSubmit={handleSubmit}>
         <div className="row">
             <i className="fas fa-person"></i>
@@ -91,7 +91,7 @@ const Registration = () => {
   </label>
 </div>
 <div className="row button">
-            <input type="submit" value="SignUp" />
+            <input type="submit" value="CREATE" />
           </div>
           
         </form>

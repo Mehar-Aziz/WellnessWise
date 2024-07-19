@@ -9,8 +9,8 @@
 .terms input[type="checkbox"] {
     accent-color: #D3D3D3; 
     position: relative;
-    left: -175px;
-    top: 22px;
+    left: -200px;
+    top: 20px;
     margin-right: 10px;
     width: 20px; 
     height: 20px;
@@ -18,7 +18,7 @@
 }
 
 .terms a {
-    color: #D3D3D3;
+    color: red;
     text-decoration: none;
 }
 
