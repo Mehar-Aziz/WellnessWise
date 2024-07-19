@@ -1,7 +1,5 @@
 body{
   background: #fff;
-  font-family: "Hind", sans-serif;
-  font-weight: 300;
   font-style: normal;
  
 }
@@ -39,6 +37,9 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.wrapper .title span {
+  font-weight: 590;
 }
 .wrapper form{
   padding: 30px 25px 25px 25px;
