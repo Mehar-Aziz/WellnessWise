@@ -5,8 +5,8 @@ import './HomeBackground.scss';
 function Home() {
     return (
         <div>
-            {/* Slider */}
-            <div className='background-effect'>
+            {/* messafe */}
+            <div id='home' className='background-effect'>
             <div className="homeMessage">
             <h1>Welcome to Wellness Wise</h1>
             <p>Your journey to a healthier, happier life begins here. At Wellness Wise, we’re dedicated to helping you achieve optimal well-being with our comprehensive health and wellness solutions.</p>
@@ -62,7 +62,7 @@ function Home() {
             </section>
 
             {/* With Medical */}
-            <section id="about_us" className="with-medical">
+            <section id="about-us" className="with-medical">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6 col-md-12 txtr">
@@ -84,7 +84,7 @@ function Home() {
             </section>
 
             {/* Contact Us */}
-            <section id="contact_us" className="contact-us-single for-gap">
+            <section id="contact-us" className="contact-us-single for-gap">
                 <div className="row no-margin">
 
                     <div className="col-sm-6 cop-ck">

@@ -29,10 +29,10 @@ $bg-height: 50px;
   0% { background-position: $bg-width $bg-height; }
 }
 
-/* Main styles */
+
 .background-effect {
-  margin-top: 2px;
-  /* img size is 50x50 */
+  margin-top: 57px;
+
   background: url($bg-url) repeat 0 0;
   
   -webkit-animation: bg-scrolling-reverse .92s infinite; /* Safari 4+ */

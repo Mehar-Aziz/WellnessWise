@@ -2,9 +2,10 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 #root {
   min-height: 100%;
-  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-y: auto;
 }
