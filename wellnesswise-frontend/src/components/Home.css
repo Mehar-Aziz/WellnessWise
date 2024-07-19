@@ -230,3 +230,87 @@ font-size: 15px; }
     font-size: 1.1rem; 
     text-align: justify;
 }
+
+/*Contact us */
+
+.contact-us-single {
+    position: relative;
+    top: -500px;
+    padding: 40px;
+
+}
+
+/* Center the Form */
+.row.no-margin {
+    margin: 0;
+}
+
+.col-sm-6.cop-ck {
+    margin: 0 auto;
+    max-width: 600px; 
+    padding: 20px;
+    background: #ffffff; 
+}
+
+.contact-us-single h2 {
+    text-align: center; 
+    color: black;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5rem;
+    text-decoration: underline;
+}
+
+/* Form Row Style */
+.cf-ro {
+    margin-bottom: 20px;
+    display: flexbox;
+    align-items: center;
+}
+
+.cf-ro label {
+    font-weight: normal;
+    margin-right: 10px;
+    width: 100%;
+    max-width: 150px; 
+}
+
+.cf-ro input,
+.cf-ro textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Button Style */
+.row.cf-ro:last-child {
+    display: flex;
+    justify-content: center; 
+}
+
+.btn-success {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-success:hover {
+    background-color: #343434;
+    cursor: pointer; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-us-single {
+        padding: 20px;
+    }
+
+    .col-sm-6.cop-ck {
+        max-width: 100%;
+    }
+}

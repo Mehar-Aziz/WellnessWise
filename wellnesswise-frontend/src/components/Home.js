@@ -88,7 +88,7 @@ function Home() {
                 <div className="row no-margin">
 
                     <div className="col-sm-6 cop-ck">
-                        <h2>Contact Form</h2>
+                        <h2>CONTACT</h2>
                         <div className="row cf-ro">
                             <div className="col-sm-3"><label>Enter Name:</label></div>
                             <div className="col-sm-8"><input type="text" placeholder="Enter Name" name="name" className="form-control input-sm" /></div>
