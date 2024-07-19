@@ -3,8 +3,6 @@
   font-weight: 400;
   font-style: normal;
   }
-  img {
-    max-width: 100%; }
   
   a {
     text-decoration: none;
@@ -94,90 +92,6 @@
     .inner-title p {
       width: 100%;
       text-align: center; }
-  
-  .page-nav {
-    padding: 40px;
-    text-align: center;
-    padding-top: 160px; }
-    .page-nav ul {
-      float: none;
-      margin: auto; }
-    .page-nav h2 {
-      font-size: 36px;
-      width: 100%;
-      color: #444; }
-      @media screen and (max-width: 600px) {
-        .page-nav h2 {
-          font-size: 26px; } }
-    .page-nav ul li {
-      float: left;
-      margin-right: 10px;
-      margin-top: 10px;
-      font-size: 16px; }
-      .page-nav ul li i {
-        width: 30px;
-        text-align: center;
-        color: #444; }
-      .page-nav ul li a {
-        color: #444; }
-  
-  .btn-success {
-    background-color: #00ab9f;
-    border-color: #00ab9f; }
-    .btn-success:hover {
-      background-color: #00ab9f !important;
-      border-color: #00ab9f !important; }
-    .btn-success:active {
-      background-color: #00ab9f !important;
-      border-color: #00ab9f !important; }
-    .btn-success:focus {
-      background-color: #00ab9f !important;
-      border-color: #00ab9f !important;
-      box-shadow: none !important; }
-  
-  .btn-info {
-    background-color: #00a8df;
-    border-color: #00a8df; }
-    .btn-info:hover {
-      background-color: #00a8df !important;
-      border-color: #00a8df !important; }
-    .btn-info:active {
-      background-color: #00a8df !important;
-      border-color: #00a8df !important; }
-    .btn-info:focus {
-      background-color: #00a8df !important;
-      border-color: #00a8df !important;
-      box-shadow: none !important; }
-  
-  .btn {
-    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-    border-radius: 2px; }
-  
-  .form-control:focus {
-    box-shadow: none !important;
-    border: 2px solid  #00a8df; }
-  
-  .btn-light {
-    background-color: #FFF;
-    color: #3F3F3F; }
-  
-  @media screen and (max-width: 1199px) {
-    .container {
-      max-width: 100%; } }
-  .collapse.show {
-    display: block !important; }
-  
-  .form-control:focus {
-    box-shadow: none;
-    border: 2px solid #0d7a40 !important; }
-  
-  .form-control {
-    background-color: #F8F8F8;
-    margin-bottom: 20px; }
-    .form-control:focus {
-      background-color: #FFF;
-      border-color: #CCC; }
-  
  /* Home.css */
 .homeMessage {
     display: flexbox;
@@ -227,7 +141,8 @@
   }
   
   .cta-button:hover {
-    background-color: #343434; /* Darker shade on hover */
+    background-color: #343434;
+    cursor: pointer;
   }
 
 .buttonPad {
@@ -235,131 +150,83 @@
 }
   
   /* ===================================== Key Features CSS ================================== */
-  .key-features {
-    padding: 80px 50px; }
-    @media screen and (max-width: 940px) {
-      .key-features {
-        padding: 30px 10px; } }
-    .key-features .single-key {
-      background-color: #FFF;
-      box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-      border-radius: 2px;
-      margin-bottom: 30px;
-      text-align: center;
-      padding: 30px; }
-      .key-features .single-key i {
-        background-color: #00ab9f;
-        padding: 20px;
-        font-size: 42px;
-        color: #FFF;
-        margin-bottom: 30px;
-        border-radius: 50px; }
-      .key-features .single-key:hover {
-        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
-      .key-features .single-key p {
-        font-family: "mouse-300", Arial, Helvetica, sans-serif;
-        font-size: 15px; }
-  
+.inner-title h2 {
+font-family: "Abel", sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size: 2.5rem;
+text-decoration: underline;
+}
+.inner-title p {
+    padding-top: 20px;
+    font-size: 1.5rem;
+}
+.key-features {
+position: relative;
+top: -200px;
+padding: 80px 50px; }
+@media screen and (max-width: 940px) {
+.key-features {
+padding: 30px 10px; } }
+.key-features .single-key {
+background-color: #FFF;
+box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+border-radius: 2px;
+margin-bottom: 30px;
+text-align: center;
+padding: 50px; }
+.key-features .single-key i {
+background-color: black;
+padding: 20px;
+font-size: 42px;
+color: #FFF;
+margin-bottom: 30px;
+border-radius: 50px;
+overflow: visible; }
+
+.key-features .single-key h5 {
+font-size: 1.5rem;
+position: relative;
+top: -15px;
+text-decoration:underline;
+}
+.key-features .single-key:hover {
+box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+.key-features .single-key p {
+font-family: "Abel", sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size: 15px; }
+
   /* ===================================== With Medical CSS ================================== */
-  .with-medical {
-    padding: 80px 50px;
-    background-color: #FFF; }
-    @media screen and (max-width: 940px) {
-      .with-medical {
-        padding: 30px 10px; } }
-    .with-medical .txtr {
-      padding: 10px; }
-      .with-medical .txtr h4 {
-        font-size: 32px; }
-        .with-medical .txtr h4 span {
-          color: #03509e; }
-      .with-medical .txtr p {
-        text-indent: 20px;
-        font-size: 1.1rem; }
-  
-  /* ===================================== Clinic Number Say CSS ================================== */
-  .doctor-message {
-    background-image: url("");
-    background-attachment: fixed;
-    background-size: cover; }
-    .doctor-message .inner-lay {
-      background-color: rgba(6, 79, 90, 0.8);
-      padding: 80px 50px;
-      color: #FFF; }
-      @media screen and (max-width: 940px) {
-        .doctor-message .inner-lay {
-          padding: 30px 10px; } }
-      .doctor-message .inner-lay .numb {
-        text-align: center;
-        padding: 30px; }
-        .doctor-message .inner-lay .numb h3 {
-          font-size: 42px;
-          padding-bottom: 10px;
-          border-bottom: 1px solid #CCC;
-          margin-bottom: 20px; }
-  
-  /*====================================== Blog Style ====================================*/
-  .blog {
-    padding: 50px; }
-    @media screen and (max-width: 990px) {
-      .blog {
-        padding: 50px 10px; } }
-    @media screen and (max-width: 1199px) {
-      .blog .container {
-        max-width: 100%; } }
-    .blog .blog-singe {
-      box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-      border-radius: 2px;
-      background-color: #FFF;
-      margin-bottom: 30px; }
-      .blog .blog-singe .blog-img-tab {
-        padding: 0px; }
-      .blog .blog-singe .blog-content-tab {
-        padding: 15px; }
-        .blog .blog-singe .blog-content-tab h2 {
-          font-size: 19px; }
-        .blog .blog-singe .blog-content-tab i {
-          margin-right: 10px;
-          font-size: 12px; }
-          .blog .blog-singe .blog-content-tab i small {
-            margin-left: 5px;
-            font-size: 100%; }
-        .blog .blog-singe .blog-content-tab .blog-desic {
-          margin-top: 8px;
-          font-size: 12px;
-          text-indent: 20px;
-          margin-bottom: 10px; }
-        .blog .blog-singe .blog-content-tab a {
-          color: #06b2b6;
-          font-size: 12px; }
-          .blog .blog-singe .blog-content-tab a i {
-            margin-left: 15px;
-            font-size: 13px; }
-  
-  .blog-new-page {
-    background-color: #FFF; }
-  
-  /* ===================================== Our Team Style  ================================== */
-  .our-team {
-    padding: 80px 50px;
-    background-color: #FBFBFB; }
-    @media screen and (max-width: 940px) {
-      .our-team {
-        padding: 30px 10px; } }
-    .our-team .team-row {
-      margin-top: 20px; }
-      .our-team .team-row .single-usr {
-        box-shadow: 0 2px 6px 0 rgba(218, 218, 253, 0.65), 0 2px 6px 0 rgba(206, 206, 238, 0.54);
-        margin-bottom: 20px; }
-        .our-team .team-row .single-usr img {
-          width: 100%; }
-        .our-team .team-row .single-usr .det-o {
-          padding: 20px;
-          background-color: #00ab9f; }
-          .our-team .team-row .single-usr .det-o h4 {
-            color: #FFF;
-            margin-bottom: 0px; }
-          .our-team .team-row .single-usr .det-o i {
-            color: #FFF; }
-  
-  
+.with-medical {
+    position: relative;
+    top: -399px;
+    background-color: #FFF; 
+}
+.about-image {
+    width: 100%;
+}
+
+@media screen and (max-width: 940px) {
+.with-medical {
+    padding: 30px 10px; } }
+
+.with-medical .txtr {
+    padding: 10px; }
+
+.with-medical .txtr h4 {
+    font-size: 32px; }
+
+.with-medical .txtr h4 span {
+    color: red; }
+
+.with-medical .txtr p span {
+    color: red;
+}
+
+.with-medical .txtr p {
+    justify-content: center;
+    font-size: 1.1rem; 
+    text-align: justify;
+}

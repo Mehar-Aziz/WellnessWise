@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import './HomeBackground.scss'
+import './HomeBackground.scss';
 
 function Home() {
     return (
@@ -12,6 +12,9 @@ function Home() {
             <p>Your journey to a healthier, happier life begins here. At Wellness Wise, we’re dedicated to helping you achieve optimal well-being with our comprehensive health and wellness solutions.</p>
             <div className='buttonPad'>
             <button className="cta-button">Discover More</button>
+            <br />
+            <br />
+           <button className='cta-button'>Book an Appointment</button>
             </div>
             </div>
             </div>
@@ -20,7 +23,7 @@ function Home() {
             <section id="services" className="key-features">
                 <div className="container">
                     <div className="inner-title">
-                        <h2>Our Key Features</h2>
+                        <h2>SERVICES</h2>
                         <p>Take a look at some of our key features</p>
                     </div>
                     <div className="row">
@@ -28,32 +31,22 @@ function Home() {
                             {
                                 icon: 'fas fa-hospital-alt',
                                 title: 'Newest Technologies',
-                                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut erat nec leo lobortis blandit.'
+                                description: 'We leverage cutting-edge technologies to deliver personalized and efficient health solutions, ensuring the highest standards of care on your wellness journey.'
                             },
                             {
                                 icon: 'fas fa-user-md',
                                 title: 'Experienced Doctors',
-                                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut erat nec leo lobortis blandit.'
+                                description: 'Our team of seasoned professionals combines deep expertise with compassionate care, providing you with trusted guidance and exceptional health solutions.'
                             },
                             {
                                 icon: 'fas fa-briefcase-medical',
                                 title: 'High Customer Satisfaction',
-                                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut erat nec leo lobortis blandit.'
-                            },
-                            {
-                                icon: 'fas fa-capsules',
-                                title: 'Pharma Pipeline',
-                                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut erat nec leo lobortis blandit.'
-                            },
-                            {
-                                icon: 'fas fa-prescription-bottle-alt',
-                                title: 'Pharma Team',
-                                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut erat nec leo lobortis blandit.'
+                                description: 'We prioritize your well-being, delivering personalized care and exceptional service to ensure every visit exceeds your expectations.'
                             },
                             {
                                 icon: 'far fa-thumbs-up',
                                 title: 'High Quality Treatments',
-                                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut erat nec leo lobortis blandit.'
+                                description: 'We offer top-notch, evidence-based treatments to ensure the best outcomes and a healthier future for you.'
                             }
                         ].map((feature, index) => (
                             <div key={index} className="col-md-4 col-sm-6">
@@ -72,117 +65,20 @@ function Home() {
             <section id="about_us" className="with-medical">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-6 col-md-12">
-                            <img src="assets/images/why.jpg" alt="Why Choose Us" />
+                        <div className="col-lg-6 col-md-12 txtr">
+                        <h4>
+                                Why Choose Health Care with <br />
+                                <span>Wellness Wise</span>
+                            </h4>
+                            <br />
+                            <img className='about-image' src={require('../assets/a-person-smiles-holding-a-water-bottle-and-a-yoga-mat.jpg')} alt="Why Choose Us" />
                         </div>
                         <div className="col-lg-6 col-md-12 txtr">
-                            <h4>
-                                Why Choose Health Care with <br />
-                                <span>Medical Hospital</span>
-                            </h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer neque libero, pulvinar et elementum quis, facilisis eu ante. Mauris non placerat sapien. Pellentesque tempor arcu non odio scelerisque ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius eros consequat auctor gravida. Fusce tristique lacus at urna sollicitudin pulvinar. Suspendisse hendrerit ultrices mauris.</p>
-                            <p>Ut ultricies lacus a rutrum mollis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed porta dolor quis felis pulvinar dignissim. Etiam nisl ligula, ullamcorper non metus vitae, maximus efficitur mi. Vivamus ut ex ullamcorper, scelerisque lacus nec, commodo dui. Proin massa urna, volutpat vel augue eget, iaculis tristique dui.</p>
+                            
+                            <p>At <span>Wellness Wise</span>, we elevate your healthcare experience with advanced technology and compassionate care. Our expert team delivers personalized treatments tailored to your unique needs, ensuring top-quality care in a supportive environment.</p>
+                            <p>We offer a comprehensive range of services, from routine check-ups to specialized treatments, all designed to support your overall health. Our holistic approach integrates traditional practices with innovative wellness strategies, focusing on both physical and mental well-being.</p>
+                            <p>Choosing <span>Wellness Wise</span> means partnering with a dedicated team committed to exceptional care and high patient satisfaction. Experience superior healthcare that truly makes a difference—choose Wellness Wise for a healthier, happier you.</p>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Blog */}
-            <div id="blog" className="blog">
-                <div className="row session-title">
-                    <h2>Latest Blog</h2>
-                    <p>We can talk for a long time about the advantages of our Dental clinic before other medical treatment facilities. But you can read the following facts in order to make sure of all pluses of our clinic:</p>
-                </div>
-                <div className="container">
-                    <div className="row">
-                        {[
-                            {
-                                image: 'assets/images/blog/blog_01.jpg',
-                                title: 'Why Primary Treatment is Important?',
-                                description: 'Lorem Ipsum, type lorem then press the shortcut. The default keyboard shortcut is the same keyboard shortcut is the',
-                                link: 'blog_single.html'
-                            },
-                            {
-                                image: 'assets/images/blog/blog_02.jpg',
-                                title: 'Why Primary Treatment is Important?',
-                                description: 'Lorem Ipsum, type lorem then press the shortcut. The default keyboard shortcut is the same keyboard shortcut is the',
-                                link: 'blog_single.html'
-                            }
-                        ].map((post, index) => (
-                            <div key={index} className="col-md-6 col-sm-12">
-                                <div className="blog-singe no-margin row">
-                                    <div className="col-sm-5 blog-img-tab">
-                                        <img src={post.image} alt={post.title} />
-                                    </div>
-                                    <div className="col-sm-7 blog-content-tab">
-                                        <h2>{post.title}</h2>
-                                        <p>
-                                            <i className="fas fa-user"><small>Admin</small></i>
-                                            <i className="fas fa-eye"><small>(12)</small></i>
-                                            <i className="fas fa-comments"><small>(12)</small></i>
-                                        </p>
-                                        <p className="blog-desic">{post.description}</p>
-                                        <a href={post.link}>Read More <i className="fas fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
-
-            {/* Gallery */}
-            <div id="gallery" className="gallery">
-                <div className="container">
-                    <div className="gallery-filter d-none d-sm-block">
-                        <button className="btn btn-default filter-button" data-filter="all">All</button>
-                        <button className="btn btn-default filter-button" data-filter="hdpe">Dental</button>
-                        <button className="btn btn-default filter-button" data-filter="sprinkle">Cardiology</button>
-                        <button className="btn btn-default filter-button" data-filter="spray">Neurology</button>
-                        <button className="btn btn-default filter-button" data-filter="irrigation">Laboratory</button>
-                    </div>
-                    <br />
-                    <div className="row">
-                        {[
-                            'gallery_01.jpg',
-                            'gallery_02.jpg',
-                            'gallery_03.jpg',
-                            'gallery_04.jpg',
-                            'gallery_05.jpg',
-                            'gallery_06.jpg'
-                        ].map((img, index) => (
-                            <div key={index} className={`gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter ${index % 2 === 0 ? 'hdpe' : 'spray'}`}>
-                                <img src={`assets/images/gallery/${img}`} className="img-responsive" alt={`Gallery item ${index + 1}`} />
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
-
-            {/* Our Team */}
-            <section className="our-team">
-                <div className="container">
-                    <div className="inner-title row">
-                        <h2>Our Team</h2>
-                        <p>Take a look at our Team</p>
-                    </div>
-                    <div className="row team-row">
-                        {[
-                            { image: 'team-memb1.jpg', name: 'David Kanuel', title: 'Facial Surgeon' },
-                            { image: 'team-memb2.jpg', name: 'David Kanuel', title: 'Facial Surgeon' },
-                            { image: 'team-memb3.jpg', name: 'David Kanuel', title: 'Facial Surgeon' },
-                            { image: 'team-memb4.jpg', name: 'David Kanuel', title: 'Facial Surgeon' }
-                        ].map((member, index) => (
-                            <div key={index} className="col-md-3 col-sm-6">
-                                <div className="single-usr">
-                                    <img src={`assets/images/team/${member.image}`} alt={member.name} />
-                                    <div className="det-o">
-                                        <h4>{member.name}</h4>
-                                        <i>{member.title}</i>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
                     </div>
                 </div>
             </section>
