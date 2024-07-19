@@ -87,7 +87,7 @@ const Registration = () => {
           <div className="row">
   <label className="terms">
     <input type="checkbox" required  />
-    I agree with<a href="/terms">Terms and Conditions</a>. 
+    I agree with<a href="/terms"> Terms and Conditions</a>. 
   </label>
 </div>
 <div className="row button">
