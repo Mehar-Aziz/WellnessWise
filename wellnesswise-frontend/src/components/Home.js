@@ -1,16 +1,18 @@
 import React from 'react';
 import './Home.css';
-import backgroundImage from '../assets/vecteezy_generative-ai-burning-candle-on-beige-background-aesthetic_25517754.jpg'
+import './HomeBackground.scss'
 
 function Home() {
     return (
         <div>
             {/* Slider */}
-            <div className='Home'>
+            <div className='background-effect'>
             <div className="homeMessage">
             <h1>Welcome to Wellness Wise</h1>
             <p>Your journey to a healthier, happier life begins here. At Wellness Wise, we’re dedicated to helping you achieve optimal well-being with our comprehensive health and wellness solutions.</p>
+            <div className='buttonPad'>
             <button className="cta-button">Discover More</button>
+            </div>
             </div>
             </div>
 
