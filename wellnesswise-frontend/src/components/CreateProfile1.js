@@ -38,7 +38,6 @@ const CreateProfile1 = () => {
     }
   };
 
-
   const handleRemoveHobby = (index) => {
     const newHobbies = hobbies.slice();
     newHobbies.splice(index, 1);
@@ -122,6 +121,7 @@ const handleRemoveGoal = (index) => {
           {hobbies.length > 1 && (
             <button
               type="button"
+              className='removebtn'
               onClick={() => handleRemoveHobby(index)}
             >
               Remove
