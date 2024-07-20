@@ -15,14 +15,14 @@ const CreateProfileButton = (props) => {
 navigate('/home')//got to dashboard profile
     };
 
-    /*const handleCreate = () => {
-        navigate('/createProfile')
-    }*/
+    const handleCreate = () => {
+        navigate('/createprofile')
+    }
    
   return (
     <div className="card">
       <button className="card-button" onClick={handleSkip}>SKIP</button>
-      <button className="card-button">CREATE</button>
+      <button className="card-button" onClick={handleCreate}>CREATE</button>
     </div>
   );
 };

@@ -1,0 +1,44 @@
+.your-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .row input {
+    flex: 1;
+  }
+  
+  .row button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+
+  .addBtn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 309px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .terms input[type="checkbox"] {
+    accent-color: #D3D3D3; 
+    position: relative;
+    margin-left: 50px;
+    top: 20px;
+    width: 20px; 
+    height: 20px;
+    cursor: pointer;
+}
+  

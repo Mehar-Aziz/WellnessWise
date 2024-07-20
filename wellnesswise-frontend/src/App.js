@@ -6,6 +6,7 @@ import Login from "./components/Login";
 import Registration from "./components/Registration";
 import Home from "./components/Home"; 
 import CreateProfileButton from "./components/CreateProfileButton";
+import CreateProfile1 from "./components/CreateProfile1";
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
            <Route path="/register" element={<Registration />} />
           {/* Define other routes for different pages/components */}
           <Route path="/button" element={<CreateProfileButton funcNav={setShowNav} />} />
+          <Route path="/createprofile" element={<CreateProfile1 />} />
         </Routes>
         { showNav &&
         <footer>
