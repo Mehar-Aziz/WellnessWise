@@ -25,7 +25,7 @@ const Registration = () => {
     setPassword('');
 
     //Navigate to login
-    navigate('/login');
+    navigate('/button');
 
   };
 
