@@ -13,7 +13,7 @@ function Home() {
             {/* messafe */}
             <div id='home' className='background-effect'>
             <div className="homeMessage">
-            <h1>Welcome to Wellness Wise</h1>
+            <h1>This is the place to be WELL</h1>
             <p>Your journey to a healthier, happier life begins here. At Wellness Wise, we’re dedicated to helping you achieve optimal well-being with our comprehensive health and wellness solutions.</p>
             <div className='buttonPad'>
             <button className="cta-button" >Discover More</button>

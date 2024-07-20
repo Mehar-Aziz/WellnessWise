@@ -30,7 +30,8 @@ html, body {
 .wrapper .title{
   height: 90px;
   background: #fff;
-  
+  position: relative;
+  left: 20px;
   color: black;
   font-size: 30px;
   font-weight: 600;
