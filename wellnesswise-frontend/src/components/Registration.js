@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 //import { useNavigate } from 'react-router-dom';
 import './Registration.css';
 import './Login.css'; 
 import CreateProfileButton from './CreateProfileButton';
+import { UserContext } from '../context/UserContext';
 
 const Registration = () => {
  // const navigate = useNavigate();
+ const { setUserData } = useContext(UserContext);
+
   const [showModal, setShowModal] = useState(false);
 
   const [name, setName] = useState('');
@@ -16,7 +19,14 @@ const Registration = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+     // Save user data to context
+    setUserData(prevData => ({
+      ...prevData,
+      name,
+      email,
+      phone,
+      address,
+    }));
     // Reset form fields
     setName('');
     setEmail('');

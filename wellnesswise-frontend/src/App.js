@@ -8,10 +8,16 @@ import Home from "./components/Home";
 import CreateProfileButton from "./components/CreateProfileButton";
 import CreateProfile1 from "./components/CreateProfile1";
 import Profile from "./pages/profile";
+import { UserProvider } from "./context/UserContext";
+
+
+
 function App() {
 
   const [showNav, setShowNav] = useState(true);
+
   return (
+    <UserProvider>
     <Router>
     <div id="root">
       <div className="App">
@@ -38,6 +44,7 @@ function App() {
       </div>
     </div>
     </Router>
+    </UserProvider>
   );
 }
 

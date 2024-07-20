@@ -1,17 +1,21 @@
 import React from 'react';
+import { useContext } from 'react';
 import './Profile.css';
 import userProfile from '../assets/Screenshot 2024-07-20 150438.png'
+import { UserContext } from '../context/UserContext';
 
 
 const Profile = () => {
+  const { userData } = useContext(UserContext);
+
   return (
     <div className="user-profile">
       <h1>USER PROFILE</h1>
       <div className="profile-card">
         <img src={userProfile} alt="User avatar" className="avatar" />
-        <h2>John Smith</h2>
+        <h2>{userData.name}</h2>
         <p>Full Stack Developer</p>
-        <p>Bay Area, San Francisco, CA</p>
+        <p>{userData.address}</p>
         <div className="button-group">
           <button className="follow-btn">EDIT</button>
           <button className="message-btn">GET ADVICE
@@ -21,15 +25,13 @@ const Profile = () => {
       
       <div className="info-card">
         <h3>Full Name</h3>
-        <p>Johnatan Smith</p>
+        <p>{userData.name}</p>
         <h3>Email</h3>
-        <p>example@example.com</p>
+        <p>{userData.email}</p>
         <h3>Phone</h3>
-        <p>(097) 234-5678</p>
-        <h3>Mobile</h3>
-        <p>(098) 765-4321</p>
+        <p>{userData.phone}</p>
         <h3>Address</h3>
-        <p>Bay Area, San Francisco, CA</p>
+        <p>{userData.address}</p>
       </div>
       
       <div className="progress-status">
