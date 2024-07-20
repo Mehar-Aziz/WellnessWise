@@ -145,6 +145,7 @@ const handleRemoveGoal = (index) => {
             {goals.length > 1 && (
               <button
                 type="button"
+                className='removebtn'
                 onClick={() => handleRemoveGoal(index)}
               >
                 Remove
@@ -185,4 +186,3 @@ const handleRemoveGoal = (index) => {
 };
 
 export default CreateProfile1;
-
