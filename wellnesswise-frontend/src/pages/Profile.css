@@ -6,11 +6,31 @@
     padding: 20px;
     background-color: #f0f0f0;
   }
+
+  .user-profile h1 {
+    position: relative;
+    top: -60px;
+    left: 500px;
+    text-decoration: underline;
+    font-weight: 550;
+  }
   
-  .profile-card, .info-card, .progress-status {
+  .profile-card, .info-card{
     background-color: white;
     border-radius: 8px;
-    padding: 80px;
+    padding: 60px;
+    position: relative;
+    left: -150px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-right: 20px;
+  }
+  .progress-status {
+    background-color: white;
+    border-radius: 8px;
+    padding: 100px;
+    position: relative;
+    left: -150px;
     margin-bottom: 20px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }

@@ -6,6 +6,7 @@ import userProfile from '../assets/Screenshot 2024-07-20 150438.png'
 const Profile = () => {
   return (
     <div className="user-profile">
+      <h1>USER PROFILE</h1>
       <div className="profile-card">
         <img src={userProfile} alt="User avatar" className="avatar" />
         <h2>John Smith</h2>
