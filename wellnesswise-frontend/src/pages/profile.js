@@ -3,10 +3,16 @@ import { useContext } from 'react';
 import './Profile.css';
 import userProfile from '../assets/Screenshot 2024-07-20 150438.png'
 import { UserContext } from '../context/UserContext';
-
+import { useNavigate } from 'react-router-dom';
 
 const Profile = () => {
+  const navigate = useNavigate()
   const { userData } = useContext(UserContext);
+
+  const handleResources = (e) => {
+    e.preventDefault();
+    navigate('/resources');
+  };
 
   return (
     <div className="user-profile">
@@ -17,7 +23,7 @@ const Profile = () => {
         <p>{userData.education}</p>
         <p>{userData.address}</p>
         <div className="button-group">
-          <button className="follow-btn">EDIT</button>
+          <button className="follow-btn" onClick={handleResources}>EDIT</button>
           <button className="message-btn">GET ADVICE
           </button>
         </div>
