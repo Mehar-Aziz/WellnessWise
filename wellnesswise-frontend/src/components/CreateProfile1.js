@@ -66,7 +66,7 @@ const handleRemoveGoal = (index) => {
   
 
     //Navigate to login
-    navigate('/button');
+    navigate('/profile');
 
   };
 
@@ -169,12 +169,6 @@ const handleRemoveGoal = (index) => {
             />
           </div>
 
-          <div className="row">
-  <label className="terms">
-    <input type="checkbox" required  />
-    I agree with<a href="/terms"> Terms and Conditions</a>. 
-  </label>
-</div>
 <div className="row button">
             <input type="submit" value="CREATE" />
           </div>

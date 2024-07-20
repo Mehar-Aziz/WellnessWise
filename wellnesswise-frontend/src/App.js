@@ -7,7 +7,7 @@ import Registration from "./components/Registration";
 import Home from "./components/Home"; 
 import CreateProfileButton from "./components/CreateProfileButton";
 import CreateProfile1 from "./components/CreateProfile1";
-
+import Profile from "./pages/profile";
 function App() {
 
   const [showNav, setShowNav] = useState(true);
@@ -27,7 +27,9 @@ function App() {
           {/* Define other routes for different pages/components */}
           <Route path="/button" element={<CreateProfileButton funcNav={setShowNav} />} />
           <Route path="/createprofile" element={<CreateProfile1 />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
+
         { showNav &&
         <footer>
         <Footer />
