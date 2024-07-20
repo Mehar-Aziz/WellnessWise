@@ -9,6 +9,7 @@ import CreateProfileButton from "./components/CreateProfileButton";
 import CreateProfile1 from "./components/CreateProfile1";
 import Profile from "./pages/profile";
 import { UserProvider } from "./context/UserContext";
+import Resources from "./pages/Resources";
 
 
 
@@ -34,6 +35,7 @@ function App() {
           <Route path="/button" element={<CreateProfileButton funcNav={setShowNav} />} />
           <Route path="/createprofile" element={<CreateProfile1 />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/resources" element={<Resources />} />
         </Routes>
 
         { showNav &&
