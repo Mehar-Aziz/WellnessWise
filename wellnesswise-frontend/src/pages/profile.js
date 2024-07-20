@@ -23,7 +23,7 @@ const Profile = () => {
         <p>{userData.education}</p>
         <p>{userData.address}</p>
         <div className="button-group">
-          <button className="follow-btn" onClick={handleResources}>EDIT</button>
+          <button className="follow-btn" onClick={handleResources}>RESOURCES</button>
           <button className="message-btn">GET ADVICE
           </button>
         </div>
