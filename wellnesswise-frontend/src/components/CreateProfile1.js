@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import './Registration.css';
 import './Login.css'; 
 import './CreateProfile.css'
+import { useNavigate } from 'react-router-dom';
 
 const CreateProfile1 = () => {
   const navigate = useNavigate();
@@ -11,7 +11,6 @@ const CreateProfile1 = () => {
   const [education, setEducation] = useState('');
   const [birth, setBirth] = useState('');
   const [age, setAge] = useState('');
- 
   const [hobbies, setHobbies] = useState(['']);
   const [goals, setGoals] = useState(['']);
 
@@ -55,6 +54,7 @@ const handleRemoveGoal = (index) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Add your form submission logic here
+    navigate('/profile');
   
     // Reset form fields
     setEducation('');
@@ -65,9 +65,6 @@ const handleRemoveGoal = (index) => {
     setGender('');
   
 
-    //Navigate to login
-    navigate('/profile');
-
   };
 
   return (
@@ -75,16 +72,22 @@ const handleRemoveGoal = (index) => {
       <div className="wrapper">
         <div className="title"><span>CREATE PROFILE</span></div>
         <form onSubmit={handleSubmit}>
+
         <div className="row">
-            <i className="fas fa-venus-mars"></i>
-            <input
-              type="text"
-              placeholder="Gender"
-              value={gender}
-              onChange={(e) => setGender(e.target.value)}
-              required
-            />
-          </div>
+        <i className="fas fa-venus-mars"></i>
+        <div className="gender-select">
+          <select
+            id="gender"
+            value={gender}
+            onChange={(e) => setGender(e.target.value)}
+            required
+          >
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+      </div>
        
           <div className="row">
             <i className="fas fa-user"></i>
@@ -172,7 +175,6 @@ const handleRemoveGoal = (index) => {
 <div className="row button">
             <input type="submit" value="CREATE" />
           </div>
-          
         </form>
       </div>
     </div>

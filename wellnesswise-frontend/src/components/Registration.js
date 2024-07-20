@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
 import './Registration.css';
 import './Login.css'; 
+import CreateProfileButton from './CreateProfileButton';
 
 const Registration = () => {
-  const navigate = useNavigate();
+ // const navigate = useNavigate();
+  const [showModal, setShowModal] = useState(false);
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -13,10 +16,7 @@ const Registration = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your form submission logic here
-    console.log('Form submitted!');
-    console.log('Email/Phone:', email);
-    console.log('Password:', password);
+    
     // Reset form fields
     setName('');
     setEmail('');
@@ -24,9 +24,12 @@ const Registration = () => {
     setAddress('');
     setPassword('');
 
-    //Navigate to login
-    navigate('/button');
+    setShowModal(true);
 
+  };
+
+  const handleCloseModal = () => {
+  setShowModal(false);
   };
 
   return (
@@ -96,6 +99,13 @@ const Registration = () => {
           
         </form>
       </div>
+      {showModal && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <CreateProfileButton onClose={handleCloseModal} />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
