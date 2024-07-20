@@ -10,7 +10,7 @@
   .user-profile h1 {
     position: relative;
     top: -60px;
-    left: 500px;
+    left: 450px;
     text-decoration: underline;
     font-weight: 550;
   }
@@ -80,6 +80,22 @@
     font-size: 1rem;
   }
   
+  .progress-status h3 {
+    color: #888;
+    font-size: 1em;
+    margin-bottom: 5px;
+  }
+  .progress-status h2 {
+    font-size: 20px;
+    text-decoration: underline;
+  }
+
+  .progress-status p {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1rem;
+  }
+
   .project-status .status-item {
     margin-bottom: 15px;
   }

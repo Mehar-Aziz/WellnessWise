@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './Registration.css';
 import './Login.css'; 
 import './CreateProfile.css'
 import { useNavigate } from 'react-router-dom';
+import { UserContext } from '../context/UserContext';
 
 const CreateProfile1 = () => {
   const navigate = useNavigate();
+  const { setUserData } = useContext(UserContext);
 
   const [gender, setGender] = useState('');
   const [education, setEducation] = useState('');
@@ -13,6 +15,8 @@ const CreateProfile1 = () => {
   const [age, setAge] = useState('');
   const [hobbies, setHobbies] = useState(['']);
   const [goals, setGoals] = useState(['']);
+
+
 
   const handleHobbyChange = (index, event) => {
     const newHobbies = hobbies.slice();
@@ -52,7 +56,15 @@ const handleRemoveGoal = (index) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your form submission logic here
+    setUserData(prevData => ({
+      ...prevData,
+      gender,
+      education,
+      birth,
+      hobbies,
+      goals,
+    }));
+    
     navigate('/profile');
   
     // Reset form fields
@@ -82,8 +94,8 @@ const handleRemoveGoal = (index) => {
             required
           >
             <option value="">Select Gender</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
           </select>
         </div>
       </div>
