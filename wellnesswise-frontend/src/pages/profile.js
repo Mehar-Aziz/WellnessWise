@@ -1,12 +1,13 @@
 import React from 'react';
 import './Profile.css';
+import userProfile from '../assets/Screenshot 2024-07-20 150438.png'
 
 
 const Profile = () => {
   return (
     <div className="user-profile">
       <div className="profile-card">
-        <img src={require('../assets/Screenshot 2024-07-20 150438.png')} alt="User avatar" className="avatar" />
+        <img src={userProfile} alt="User avatar" className="avatar" />
         <h2>John Smith</h2>
         <p>Full Stack Developer</p>
         <p>Bay Area, San Francisco, CA</p>
