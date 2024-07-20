@@ -1,11 +1,12 @@
 import React from 'react';
 import './Profile.css';
 
+
 const Profile = () => {
   return (
     <div className="user-profile">
       <div className="profile-card">
-        <img src="https://example.com/avatar.jpg" alt="User avatar" className="avatar" />
+        <img src={require('../assets/Screenshot 2024-07-20 150438.png')} alt="User avatar" className="avatar" />
         <h2>John Smith</h2>
         <p>Full Stack Developer</p>
         <p>Bay Area, San Francisco, CA</p>
@@ -29,16 +30,16 @@ const Profile = () => {
         <p>Bay Area, San Francisco, CA</p>
       </div>
       
-      <div className="project-status">
+      <div className="progress-status">
         <h3>Project Status</h3>
         <div className="status-item">
-          <span>Web Design</span>
+          <span>Daily Walk</span>
           <div className="progress-bar">
             <div className="progress" style={{width: '80%'}}></div>
           </div>
         </div>
         <div className="status-item">
-          <span>Website Markup</span>
+          <span>Yoga</span>
           <div className="progress-bar">
             <div className="progress" style={{width: '70%'}}></div>
           </div>

@@ -7,10 +7,10 @@
     background-color: #f0f0f0;
   }
   
-  .profile-card, .info-card, .project-status {
+  .profile-card, .info-card, .progress-status {
     background-color: white;
     border-radius: 8px;
-    padding: 20px;
+    padding: 80px;
     margin-bottom: 20px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
@@ -34,30 +34,30 @@
     padding: 10px 20px;
     margin: 0 5px;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
   }
   
   .follow-btn {
-    background-color: #4285f4;
+    background-color: black;
     color: white;
   }
   
   .message-btn {
     background-color: white;
-    color: #4285f4;
-    border: 1px solid #4285f4;
+    color: black;
+    border: 1px solid black;
   }
   
   .info-card h3 {
     color: #888;
-    font-size: 0.9em;
+    font-size: 1em;
     margin-bottom: 5px;
   }
   
   .info-card p {
     margin-top: 0;
     margin-bottom: 15px;
+    font-size: 1rem;
   }
   
   .project-status .status-item {
@@ -72,6 +72,6 @@
   }
   
   .progress {
-    background-color: #4285f4;
+    background-color: red;
     height: 100%;
   }
