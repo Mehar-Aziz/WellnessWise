@@ -36,9 +36,9 @@ function Navbar() {
           Home</a></li>
             </ul>
              
-      <button onClick={handleLoginLogout}>
+      {/* <button onClick={handleLoginLogout}>
         {isLoggedIn ? 'Logout' : 'Login'}
-      </button>
+      </button> */}
         </nav>
     );
 }
