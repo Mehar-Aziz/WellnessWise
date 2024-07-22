@@ -2,6 +2,7 @@ import React from 'react';
 import './Home.css';
 import homeImage from '../assets/Yoga practice-bro 1.png'
 import service1 from '../assets/placeholder (1).png'
+import aboutimg from '../assets/right.png'
 //import { Link } from 'react-router-dom';
 
 
@@ -89,15 +90,15 @@ function Home() {
 
             {/* With Medical */}
             <section id="about-us" className="with-medical">
-                <div className="container">
-                    <div className="row">
+                <div className="about-container">
+                    <div className="row-about">
                         <div className="col-lg-6 col-md-12 txtr">
                         <h4>
                                 Why Choose Health Care with <br />
                                 <span>Wellness Wise</span>
                             </h4>
                             <br />
-                            <img className='about-image' src={require('../assets/a-person-smiles-holding-a-water-bottle-and-a-yoga-mat.jpg')} alt="Why Choose Us" />
+                            <img className='about-image' src={aboutimg} alt="Why Choose Us" />
                         </div>
                         <div className="col-lg-6 col-md-12 txtr">
                             
