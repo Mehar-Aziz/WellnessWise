@@ -108,6 +108,9 @@ nav ul li a {
 }
 
 @media (max-width: 768px) {
+  .logo-container h1 {
+    font-size: 20px;
+  }
   nav ul {
     display: none;
     flex-direction: column;
