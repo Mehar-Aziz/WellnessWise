@@ -1,113 +1,190 @@
 .user-profile {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 150px;
-    padding: 20px;
-    background-color: #f0f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 150px;
+  padding: 20px;
+  background-color: #fbf7f0;
+}
+
+.user-profile h1 {
+  position: relative;
+  top: -60px;
+  left: 450px;
+  text-decoration: underline;
+  font-weight: 900;
+  font-size: 35px;
+  color: #513125;
+}
+
+.profile-card, .info-card, .progress-status {
+  background-color: #F4EDE5;
+  border-radius: 8px;
+  padding: 60px;
+  position: relative;
+  left: -150px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-right: 20px;
+}
+
+.profile-card {
+  text-align: center;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.button-group {
+  margin-top: 20px;
+}
+
+.follow-btn, .message-btn {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.follow-btn {
+  background-color: #513125;
+  color: white;
+}
+
+.message-btn {
+  background-color: white;
+  color: black;
+  border: 1px solid #513125;
+}
+
+.info-card h3, .progress-status h3 {
+  color: #513125;
+  font-size: 1em;
+  margin-bottom: 5px;
+}
+
+.info-card p, .progress-status p {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.progress-status h2 {
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.project-status .status-item {
+  margin-bottom: 15px;
+}
+
+.progress-bar {
+  background-color: #e0e0e0;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress {
+  background-color: #513125;
+  height: 100%;
+}
+
+@media (max-width: 1200px) {
+  .user-profile h1 {
+    left: 300px;
+  }
+
+  .profile-card, .info-card, .progress-status {
+    left: -100px;
+    padding: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .user-profile h1 {
+    left: 0;
+    top: 0;
+  }
+
+  .profile-card, .info-card, .progress-status {
+    left: 0;
+    padding: 30px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-profile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-card, .info-card, .progress-status {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .user-profile h1 {
-    position: relative;
-    top: -60px;
-    left: 450px;
-    text-decoration: underline;
-    font-weight: 550;
+    font-size: 1.5rem;
   }
-  
-  .profile-card, .info-card{
-    background-color: white;
-    border-radius: 8px;
-    padding: 60px;
-    position: relative;
-    left: -150px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin-right: 20px;
-  }
-  .progress-status {
-    background-color: white;
-    border-radius: 8px;
-    padding: 100px;
-    position: relative;
-    left: -150px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
-  
-  .profile-card {
-    text-align: center;
-  }
-  
+
   .avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+    width: 80px;
+    height: 80px;
   }
-  
+
   .button-group {
-    margin-top: 20px;
+    flex-direction: column;
   }
-  
+
   .follow-btn, .message-btn {
-    padding: 10px 20px;
-    margin: 0 5px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .follow-btn {
-    background-color: black;
-    color: white;
-  }
-  
-  .message-btn {
-    background-color: white;
-    color: black;
-    border: 1px solid black;
-  }
-  
-  .info-card h3 {
-    color: #888;
-    font-size: 1em;
-    margin-bottom: 5px;
-  }
-  
-  .info-card p {
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-size: 1rem;
-  }
-  
-  .progress-status h3 {
-    color: #888;
-    font-size: 1em;
-    margin-bottom: 5px;
-  }
-  .progress-status h2 {
-    font-size: 20px;
-    text-decoration: underline;
+    width: 100%;
+    margin: 5px 0;
   }
 
-  .progress-status p {
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-size: 1rem;
+  .info-card p, .progress-status p {
+    font-size: 0.9rem;
   }
 
-  .project-status .status-item {
-    margin-bottom: 15px;
-  }
-  
   .progress-bar {
-    background-color: #e0e0e0;
-    height: 10px;
-    border-radius: 5px;
-    overflow: hidden;
+    height: 8px;
   }
-  
-  .progress {
-    background-color: red;
-    height: 100%;
+}
+
+@media (max-width: 576px) {
+  .user-profile {
+    padding-right: 50px;
+    padding-left: 50px;
   }
+  .user-profile h1 {
+    font-size: 1.2rem;
+    padding-bottom: 20px;
+  }
+
+  .profile-card, .info-card, .progress-status {
+    padding: 20px;
+  }
+
+  .avatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  .button-group {
+    margin-top: 10px;
+  }
+
+  .follow-btn, .message-btn {
+    padding: 8px 15px;
+  }
+
+  .info-card p, .progress-status p {
+    font-size: 0.8rem;
+  }
+}
