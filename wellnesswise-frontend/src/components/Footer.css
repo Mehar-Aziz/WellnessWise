@@ -3,15 +3,12 @@
   padding: 0;
   font-family: "Abel", sans-serif;
   font-weight: 400;
-  font-style: normal;
-  font-style: normal;
-  display: flexbox;
+  box-sizing: border-box;
 }
 
 .footer {
-  position: inherit;
-  max-width: 1280px;
-  width: 100%;
+  position:inherit;
+  max-width: 100%;
   background: #513125;
   border-radius: 6px;
 }

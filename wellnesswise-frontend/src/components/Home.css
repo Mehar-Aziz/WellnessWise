@@ -1,5 +1,8 @@
  /* General styles */
-a {
+* {
+  box-sizing:border-box;
+}
+ a {
   text-decoration: none;
   outline: none;
   color: #444;
