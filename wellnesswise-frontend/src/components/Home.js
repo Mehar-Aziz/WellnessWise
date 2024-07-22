@@ -1,8 +1,9 @@
 import React from 'react';
 import './Home.css';
-import homeImage from '../assets/Yoga practice-bro 1.png'
-import service1 from '../assets/placeholder (1).png'
-import aboutimg from '../assets/right.png'
+import homeImage from '../assets/Yoga practice-bro 1.png';
+import service1 from '../assets/placeholder (1).png';
+import aboutimg from '../assets/right.png';
+import contactimg from '../assets/undraw_contact_us_re_4qqt.svg';
 //import { Link } from 'react-router-dom';
 
 
@@ -111,7 +112,15 @@ function Home() {
             </section>
 
             {/* Contact Us */}
-            <section id="contact-us" className="contact-us-single for-gap">
+            <section id="contact-us" className="contact-us-single for-gap" style={{ 
+        backgroundImage: `linear-gradient(
+          rgba(251, 247, 240, 1),
+          rgba(251, 247, 240, 0.6)
+          
+        ), url(${contactimg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center center'
+      }}>
                 
                 <div className="row no-margin">
 
@@ -138,7 +147,7 @@ function Home() {
                         <div className="row cf-ro">
                             <div className="col-sm-3"><label></label></div>
                             <div className="col-sm-8">
-                                <button className="btn btn-success btn-sm">SEND</button>
+                                <button className="btn btn-success btn-sm">SEND MESSAGE</button>
                             </div>
                         </div>
                     </div>
