@@ -1,46 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
 import './Navbar.css';
-import { useState } from "react";
 import { Link } from "react-router-dom";
+import logo from '../assets/Screenshot_2024-07-22_120232-removebg-preview.png'; // Adjust the path based on your project structure
 
 function Navbar() {
-
-    // State to determine if the user is logged in
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  // Mock function to simulate login/logout
- const handleLoginLogout = () => {
+  const handleLoginLogout = () => {
     setIsLoggedIn(!isLoggedIn);
   };
 
-    return(
-        <nav>
-            <h1>WellnessWise</h1>
-            <ul>
-                {isLoggedIn ? (
-                    <li><button className="button-17" ><Link to="/login">Make an appointment</Link></button></li>
-                ) : (
-                <li><button className="button-17" ><Link to="/login">Login</Link></button></li>
-                )}
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
-                <li><a href="#contact-us" className="hover-underline-animation">
-          Contact Us</a></li>
+  // Function to close the menu
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+  };
 
-                <li><a href="#about-us" className="hover-underline-animation">
-          About Us</a></li>
-
-                <li><a href="#services" className="hover-underline-animation">
-          Services</a></li>
-
-                <li><a href="home" className="hover-underline-animation">
-          Home</a></li>
-            </ul>
-             
-      {/* <button onClick={handleLoginLogout}>
-        {isLoggedIn ? 'Logout' : 'Login'}
-      </button> */}
-        </nav>
-    );
+  return (
+    <nav>
+      <div className="logo-container">
+        <img src={logo} alt="WellnessWise Logo" className="logo" />
+        <h1>WellnessWise</h1>
+      </div>
+      <div className="hamburger" onClick={toggleMenu}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul className={menuOpen ? 'open' : ''}>
+        <li><Link to="home" className="hover-underline-animation" onClick={handleLinkClick}>Home</Link></li>
+        <li><a href="#services" className="hover-underline-animation" onClick={handleLinkClick}>Services</a></li>
+        <li><a href="#about-us" className="hover-underline-animation" onClick={handleLinkClick}>About Us</a></li>
+        <li><a href="#contact-us" className="hover-underline-animation" onClick={handleLinkClick}>Contact Us</a></li>
+        {isLoggedIn ? (
+          <li><button className="button-17"><Link to="/login" onClick={handleLinkClick}>Make an appointment</Link></button></li>
+        ) : (
+          <li><button className="button-17"><Link to="/login" onClick={handleLinkClick}>Login</Link></button></li>
+        )}
+      </ul>
+    </nav>
+  );
 }
 
 export default Navbar;
