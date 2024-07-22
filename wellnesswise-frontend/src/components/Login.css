@@ -1,46 +1,32 @@
-body{
-  background: #fff;
-  font-style: normal;
- 
-}
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 #root {
-  min-height: 100%;
-  overflow-y: auto; 
+  background-color: #fbf7f0;
 }
 
-::selection{
-  background: #fff;
-}
 .container{
   max-width: 440px;
   padding: 0 20px;
   margin: 170px auto;
+  background-color:#F4EDE5;
+  ;
 }
 .wrapper{
-  width: 100%;
-  background: #fff;
-  
+  width: 100%; 
 }
 .wrapper .title{
   height: 90px;
-  background: #fff;
   position: relative;
   left: 20px;
-  color: black;
+  color: #513125;
   font-size: 30px;
-  font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .wrapper .title span {
-  font-weight: 590;
+  font-weight: 900;
+  letter-spacing: 2px;
+  position: relative;
+  left: -20px;
 }
 .wrapper form{
   padding: 30px 25px 25px 25px;
@@ -71,7 +57,7 @@ form .row input::placeholder{
   position: absolute;
   width: 47px;
   height: 100%;
-  color: black;
+  color: #513125;
   font-size: 18px;
   background: #fff;
   border: 1px solid #D3D3D3;
@@ -83,7 +69,7 @@ form .row input::placeholder{
   margin: -8px 0 20px 0;
 }
 .wrapper form .pass a{
-  color: black;
+  color: #513125;
   font-size: 17px;
   text-decoration: none;
 }
@@ -93,22 +79,23 @@ form .row input::placeholder{
 
 .wrapper form .button input{
   color: #fff;
-  width: 450px;
+  width: 350px;
   font-size: 20px;
   font-weight: 500;
   padding-left: 0px;
-  background: black;
+  background: #513125;
   border: 1px solid #D3D3D3;
   cursor: pointer;
 }
 form .button input:hover{
-  background: #343434;
-  color: #D3D3D3;
+  background: #c47a5e;
+  color: #F4EDE5;
 }
 .wrapper form .signup-link{
   text-align: center;
   margin-top: 20px;
   font-size: 17px;
+  color: #513125;
 }
 .wrapper form .signup-link a{
   color: red;
@@ -116,4 +103,17 @@ form .button input:hover{
 }
 form .signup-link a:hover{
   text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .wrapper form .button input {
+    width: 100%;
+    font-size: 18px; 
+  }
+}
+
+@media (max-width: 576px) {
+  .wrapper form .button input {
+    width: 100%; 
+    font-size: 16px; 
+  }
 }

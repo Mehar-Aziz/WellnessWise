@@ -298,9 +298,8 @@ textarea {
 }
 
 .feature-card {
-background-color: #c47a5e;
+background-color: #F4EDE5;
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-  border-radius: 8px;
   text-align: center;
   padding: 50px;
 }
@@ -319,7 +318,7 @@ background-color: #c47a5e;
   font-size: 1.5rem;
   letter-spacing: 2px;
   font-weight: 600;
-  color: #fbf7f0;
+  color: #513125;
   position: relative;
   top: -15px;
   text-decoration: underline;
@@ -331,7 +330,7 @@ background-color: #c47a5e;
 
 .feature-card p {
   font-family: "Abel", sans-serif;
-  color: #fbf7f0;
+  color: #999999;
   text-align: justify;
   font-weight: 400;
   font-style: normal;
@@ -347,8 +346,7 @@ background-color: #c47a5e;
   font-size: 1rem;
   color: #fff;
   background-color: #c47a5e;
-  text-decoration:#c47a5e;
-  border: 2px solid #513125;
+  border: none;
   cursor: pointer;
   transition: background-color 0.3s;
 }
