@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import './HomeBackground.scss';
+import homeImage from '../assets/Yoga practice-bro 1.png'
 //import { Link } from 'react-router-dom';
 
 
@@ -11,60 +11,70 @@ function Home() {
     return (
         <div>
             {/* messafe */}
-            <div id='home' className='background-effect'>
+            <div id='home'>
+            {/* Content Section */}
             <div className="homeMessage">
-            <h1>This is the place to be WELL</h1>
-            <p>Your journey to a healthier, happier life begins here. At Wellness Wise, we’re dedicated to helping you achieve optimal well-being with our comprehensive health and wellness solutions.</p>
-            <div className='buttonPad'>
-            <button className="cta-button" >Discover More</button>
-            <br />
-            <br />
-    <button className='cta-button'>Book an Appointment</button>
+                <h1>Bend Your Mind,<br />Inspire Yourself !</h1>
+                <p>Your journey to a healthier, happier life begins here. At Wellness Wise, we’re dedicated to helping you achieve optimal well-being with our comprehensive health and wellness solutions.</p>
+                <div className='buttonPad'>
+                    <button className="cta-button">Discover More</button>
+                    <br />
+                    <br />
+                    <button className='cta-button'>Book an Appointment</button>
+                </div>
             </div>
+            {/* Image Section */}
+            <div className="homeImage">
+                <img src={homeImage} alt="Health and Wellness" />
             </div>
             </div>
 
-            {/* Key Features */}
-            <section id="services" className="key-features">
-                <div className="container">
-                    <div className="inner-title">
-                        <h2>SERVICES</h2>
-                        <p>Take a look at some of our key features</p>
-                    </div>
-                    <div className="row">
-                        {[
-                            {
-                                icon: 'fas fa-hospital-alt',
-                                title: 'Newest Technologies',
-                                description: 'We leverage cutting-edge technologies to deliver personalized and efficient health solutions, ensuring the highest standards of care on your wellness journey.'
-                            },
-                            {
-                                icon: 'fas fa-user-md',
-                                title: 'Experienced Doctors',
-                                description: 'Our team of seasoned professionals combines deep expertise with compassionate care, providing you with trusted guidance and exceptional health solutions.'
-                            },
-                            {
-                                icon: 'fas fa-briefcase-medical',
-                                title: 'High Customer Satisfaction',
-                                description: 'We prioritize your well-being, delivering personalized care and exceptional service to ensure every visit exceeds your expectations.'
-                            },
-                            {
-                                icon: 'far fa-thumbs-up',
-                                title: 'High Quality Treatments',
-                                description: 'We offer top-notch, evidence-based treatments to ensure the best outcomes and a healthier future for you.'
-                            }
-                        ].map((feature, index) => (
-                            <div key={index} className="col-md-4 col-sm-6">
-                                <div className="single-key">
-                                    <i className={feature.icon}></i>
-                                    <h5>{feature.title}</h5>
-                                    <p>{feature.description}</p>
-                                </div>
-                            </div>
-                        ))}
+           {/* Key Features */}
+<section id="services" className="key-features">
+    <div className="container">
+        <div className="inner-title">
+            <h2>SERVICES</h2>
+            <p>Take a look at some of our key features</p>
+        </div>
+        <div className="features-grid">
+            {[
+                {
+                    icon: 'fas fa-hospital-alt',
+                    title: 'Newest Technologies',
+                    description: 'We leverage cutting-edge technologies to deliver personalized and efficient health solutions, ensuring the highest standards of care on your wellness journey.'
+                },
+                {
+                    icon: 'fas fa-user-md',
+                    title: 'Experienced Doctors',
+                    description: 'Our team of seasoned professionals combines deep expertise with compassionate care, providing you with trusted guidance and exceptional health solutions.'
+                },
+                {
+                    icon: 'fas fa-briefcase-medical',
+                    title: 'High Customer Satisfaction',
+                    description: 'We prioritize your well-being, delivering personalized care and exceptional service to ensure every visit exceeds your expectations.'
+                },
+                {
+                    icon: 'far fa-thumbs-up',
+                    title: 'High Quality Treatments',
+                    description: 'We offer top-notch, evidence-based treatments to ensure the best outcomes and a healthier future for you.'
+                },
+                {
+                    icon: 'fas fa-heartbeat',
+                    title: 'Comprehensive Care',
+                    description: 'Our integrated approach to health and wellness covers all aspects of your well-being, ensuring you receive the care you need, when you need it.'
+                }
+            ].map((feature, index) => (
+                <div key={index} className="feature-card">
+                    <div className="single-key">
+                        <i className={feature.icon}></i>
+                        <h5>{feature.title}</h5>
+                        <p>{feature.description}</p>
                     </div>
                 </div>
-            </section>
+            ))}
+        </div>
+    </div>
+</section>
 
             {/* With Medical */}
             <section id="about-us" className="with-medical">

@@ -29,7 +29,6 @@ nav h1 {
   font-weight: 600;
   font-size: 30px;
   margin: 0;
-  /* Ensure it stays in view */
   white-space: nowrap;
 }
 
