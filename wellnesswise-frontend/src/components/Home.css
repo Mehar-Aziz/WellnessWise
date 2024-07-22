@@ -87,6 +87,7 @@ textarea {
 .homeImage {
   flex: 1;
   display: flex;
+  float: right;
   justify-content: center;
 }
 

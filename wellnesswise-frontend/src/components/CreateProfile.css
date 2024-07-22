@@ -1,33 +1,33 @@
 .removebtn {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    margin-left: 390px;
-    position: relative;
-    top: -35px;
-    left: -6px;
-  }
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 390px;
+  position: relative;
+  top: -35px;
+  left: -6px;
+}
 
-  .addBtn {
-    background-color: black;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    margin-left: auto;
-    margin-bottom: 10px;
-    cursor: pointer;
-  }
-  
-  .terms input[type="checkbox"] {
-    accent-color: #D3D3D3; 
-    position: relative;
-    margin-left: 5px;
-    top: 20px;
-    width: 20px; 
-    height: 20px;
-    cursor: pointer;
+.addBtn {
+  background-color: #513125;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-left: auto;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.terms input[type="checkbox"] {
+  accent-color: #D3D3D3;
+  position: relative;
+  margin-left: 5px;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 }
 
 .gender-select select {
@@ -39,4 +39,62 @@
   border-radius: 4px;
   box-sizing: border-box;
   font-size: 16px;
+}
+
+@media (max-width: 1200px) {
+  .removebtn {
+    margin-left: 300px; 
+  }
+}
+
+@media (max-width: 992px) {
+  .removebtn {
+    margin-left: 200px; 
+  }
+
+  .gender-select select {
+    width: 90%; 
+    left: 0; 
+  }
+}
+
+@media (max-width: 768px) {
+  .removebtn {
+    margin-left: 100px; 
+    top: -35px; 
+    left: 180px; }
+
+  .addBtn {
+    margin-left: 0; 
+    width: 100%; }
+
+  .terms input[type="checkbox"] {
+    width: 16px; 
+    height: 16px;
+    top: 15px; 
+  }
+
+  .gender-select select {
+    width: 100%; 
+    left: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .removebtn {
+    margin-left: 0; 
+    top: -35px; 
+    left: 200px; 
+  }
+
+  .addBtn {
+    width: 100%; 
+    padding: 10px; 
+  }
+
+  .terms input[type="checkbox"] {
+    width: 14px; 
+    height: 14px;
+    top: 10px; 
+  }
 }

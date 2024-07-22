@@ -9,7 +9,7 @@
 .terms input[type="checkbox"] {
     accent-color: #D3D3D3; 
     position: relative;
-    left: -200px;
+    left: -185px;
     top: 20px;
     margin-right: 10px;
     width: 20px; 
@@ -48,6 +48,35 @@
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1001;
+  }
+  .terms input[type="checkbox"] {
+    accent-color: #D3D3D3;
+    position: relative;
+    left: -185px;
+    top: 20px;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+ 
+  @media (max-width: 768px) {
+    .terms input[type="checkbox"] {
+      left: -185px;
+      top: 15px; 
+      width: 18px; 
+      height: 18px; 
+    }
+  }
+ 
+  @media (max-width: 576px) {
+    .terms input[type="checkbox"] {
+      left: -140px; 
+      top: 10px; 
+      width: 16px; 
+      height: 16px; 
+    }
   }
   
   
