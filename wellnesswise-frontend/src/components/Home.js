@@ -34,7 +34,7 @@ function Home() {
 <section id="services" className="key-features">
     <div className="container-services">
         <div className="inner-title">
-            <h2>SERVICES</h2>
+            <h2>OUR SERVICES</h2>
             <p>Take a look at some of our key features</p>
         </div>
         <div className="features-grid">
