@@ -1,54 +1,140 @@
 .wellness-page {
-    padding: 20px;
-    position: relative;
-    top: 100px;
-  }
-  
+  padding: 20px;
+  position: relative;
+  margin-bottom: 100px;
+  top: 100px;
+  background-color: #fbf7f0;
+}
+
+.search-bar {
+  margin-left: 52px;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 94%;
+  padding: 10px;
+  border: 1px solid #513125;
+  font-size: 16px;
+}
+
+.resource-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-left: 50px;
+  margin-bottom: 80px;
+}
+
+.resource-item {
+  background-color: #F4EDE5;
+  border-radius: 10px;
+  border: none;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.resource-item h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #513125;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-decoration: underline;
+}
+
+.resource-item .category {
+  color: #513125;
+  font-weight: 600;
+}
+
+.resource-item p {
+  margin: 5px 0 0;
+  color: #999999;
+  word-spacing: 2px;
+  font-size: 15px;
+}
+
+@media (max-width: 1200px) {
   .search-bar {
-    margin-left: 52px;
-    margin-bottom: 20px;
+    margin-left: 20px;
   }
-  
-  .search-bar input {
-    width: 94%;
-    padding: 10px;
-    border: 1px solid black;
+
+  .resource-list {
+    margin-left: 20px;
+    margin-bottom: 60px;
+  }
+
+  .resource-item {
+    width: 250px;
+  }
+}
+
+@media (max-width: 992px) {
+  .search-bar {
+    margin-left: 0;
+  }
+
+  .resource-list {
+    margin-left: 0;
+    margin-bottom: 40px;
+  }
+
+  .resource-item {
+    width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wellness-page {
+    top: 50px;
+  }
+
+  .search-bar {
+    margin-left: 0;
+    margin-bottom: 15px;
+  }
+
+  .resource-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .resource-item {
+    width: 100%;
+  }
+
+  .resource-item h3 {
     font-size: 16px;
   }
-  
-  .resource-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-left: 50px;
-    margin-bottom: 80px;
-  }
-  
-  .resource-item {
-    background-color: white;
-    border-radius: 20px;
-    border: none;
-    padding: 20px;
-    width: 300px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-  }
-  
-  .resource-item h3 {
-    margin: 0;
-    font-size: 18px;
-    color: black;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-decoration: underline;
-  }
-  .resource-item .category{
-    color: black;
-    font-weight: 600;
-  }
+
   .resource-item p {
-    margin: 5px 0 0;
-    color: black;
-    word-spacing: 2px;
-    font-size: 15px;
+    font-size: 14px;
   }
-  
+}
+
+@media (max-width: 576px) {
+  .wellness-page {
+    top: 100px;
+  }
+
+  .search-bar input {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .resource-item {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .resource-item h3 {
+    font-size: 14px;
+  }
+
+  .resource-item p {
+    font-size: 12px;
+  }
+}
