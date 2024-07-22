@@ -251,125 +251,132 @@ textarea {
   padding-bottom: 60px;
 }
 
-  
-/* SERVICES */
+/* Key Features / Services section */
+.container-services {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; 
+}
+
 .inner-title h2 {
   font-family: "Abel", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 2.5rem;
-  position: relative;
-  top: -200px;
   color: #513125;
-  font-weight: bold;
-  letter-spacing: 2px;
   text-decoration: underline;
 }
 
 .inner-title p {
   padding-top: 20px;
   font-size: 1.5rem;
-  position: relative;
   color: #513125;
-  top: -200px;
 }
 
 .key-features {
-  background-color: #fbf7f0;
   position: relative;
   top: -100px;
   padding: 80px 50px;
+  margin-bottom: 400px;
+  background-color: #fbf7f0;
+  overflow: visible;
 }
 
 @media screen and (max-width: 940px) {
   .key-features {
-      padding: 30px 10px;
+    padding: 30px 10px;
   }
 }
 
 .features-grid {
-  display: flex;
-  position: relative;
-  top: -200px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  justify-content: space-between;
 }
 
 .feature-card {
-  flex: 1 1 calc(20% - 30px); 
-  max-width: calc(20% - 30px); 
-  min-width: 150px; 
-}
-
-.key-features .single-key {
-  background-color: #c47a5e;
+background-color: #c47a5e;
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-  border-radius: 2px;
+  border-radius: 8px;
   text-align: center;
   padding: 50px;
 }
 
-.key-features .single-key i {
+.feature-card i {
   background-color: #513125;
   padding: 20px;
   font-size: 42px;
-  color: #FFF;
+  color: #fbf7f0;
   margin-bottom: 30px;
   border-radius: 50px;
   overflow: visible;
 }
 
-.key-features .single-key h5 {
-  color: #fbf7f0;
+.feature-card h5 {
   font-size: 1.5rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: #fbf7f0;
   position: relative;
   top: -15px;
   text-decoration: underline;
 }
 
-.key-features .single-key:hover {
+.feature-card:hover {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
-.key-features .single-key p {
+.feature-card p {
   font-family: "Abel", sans-serif;
   color: #fbf7f0;
+  text-align: justify;
   font-weight: 400;
   font-style: normal;
   font-size: 15px;
 }
 
-@media screen and (max-width: 1200px) {
-  .feature-card {
-      flex: 1 1 calc(25% - 30px); 
-      max-width: calc(25% - 30px);
+.services-btn {
+  padding: 10px 20px;
+  position: relative;
+  top: 40px;
+  margin-bottom: 2px;
+  display:inline;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #c47a5e;
+  text-decoration:#c47a5e;
+  border: 2px solid #513125;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.services-btn:hover {
+  background-color: #513125;
+  cursor: pointer;
+}
+
+
+@media screen and (min-width: 992px) {
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media screen and (max-width: 992px) {
-  .feature-card {
-      flex: 1 1 calc(33.33% - 30px); 
-      max-width: calc(33.33% - 30px);
+  .features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
   }
 }
 
 @media screen and (max-width: 768px) {
-  .feature-card {
-      flex: 1 1 calc(50% - 30px); 
-      max-width: calc(50% - 30px);
+  .features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); 
   }
 }
 
 @media screen and (max-width: 576px) {
   .features-grid {
-      flex-direction: column;
-      align-items: center;
-  }
-
-  .feature-card {
-      flex: 1 1 100%; 
-      max-width: 100%;
+    grid-template-columns: 1fr; 
   }
 }
 

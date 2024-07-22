@@ -1,6 +1,7 @@
 import React from 'react';
 import './Home.css';
 import homeImage from '../assets/Yoga practice-bro 1.png'
+import service1 from '../assets/placeholder (1).png'
 //import { Link } from 'react-router-dom';
 
 
@@ -31,7 +32,7 @@ function Home() {
 
            {/* Key Features */}
 <section id="services" className="key-features">
-    <div className="container">
+    <div className="container-services">
         <div className="inner-title">
             <h2>SERVICES</h2>
             <p>Take a look at some of our key features</p>
@@ -39,17 +40,18 @@ function Home() {
         <div className="features-grid">
             {[
                 {
-                    icon: 'fas fa-hospital-alt',
-                    title: 'Newest Technologies',
-                    description: 'We leverage cutting-edge technologies to deliver personalized and efficient health solutions, ensuring the highest standards of care on your wellness journey.'
+                    icon: 'fas fa-globe',
+                    title: 'Virtual Health Consultations',
+                    description: 'ailored health and wellness plans designed to meet individual needs and goals, incorporating nutrition, exercise, and lifestyle recommendations.',
+                    backgroundImage: service1
                 },
                 {
-                    icon: 'fas fa-user-md',
-                    title: 'Experienced Doctors',
-                    description: 'Our team of seasoned professionals combines deep expertise with compassionate care, providing you with trusted guidance and exceptional health solutions.'
+                    icon: 'fas fa-clipboard',
+                    title: 'Experienced Personalized Plans',
+                    description: 'Our team of seasoned professionals combines deep expertise with compassionate care, providing you with trusted guidance.'
                 },
                 {
-                    icon: 'fas fa-briefcase-medical',
+                    icon: 'fa fa-user',
                     title: 'High Customer Satisfaction',
                     description: 'We prioritize your well-being, delivering personalized care and exceptional service to ensure every visit exceeds your expectations.'
                 },
@@ -62,16 +64,25 @@ function Home() {
                     icon: 'fas fa-heartbeat',
                     title: 'Comprehensive Care',
                     description: 'Our integrated approach to health and wellness covers all aspects of your well-being, ensuring you receive the care you need, when you need it.'
+                },
+                {
+                    icon: 'fa-brands fa-nutritionix',
+                    title: 'Nutritional Counseling',
+                    description: 'Expert guidance on healthy eating habits, meal planning, and dietary adjustments to support optimal health and wellness.'
                 }
+                
             ].map((feature, index) => (
-                <div key={index} className="feature-card">
+                <div key={index} className="feature-card" style={{backgroundImage: `url(${feature.backgroundImage})`}}>
                     <div className="single-key">
                         <i className={feature.icon}></i>
                         <h5>{feature.title}</h5>
                         <p>{feature.description}</p>
+                        <button className='services-btn'>Learn More</button>
                     </div>
                 </div>
+                
             ))}
+           
         </div>
     </div>
 </section>
