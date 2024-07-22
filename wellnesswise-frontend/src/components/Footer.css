@@ -37,16 +37,14 @@
 .footer-col .links li {
   list-style: none;
   margin-bottom: 10px;
-}
-
-.footer-col .links li a {
   text-decoration: none;
   color: white;
 }
 
-.footer-col .links li a:hover {
+.footer-col .links li:hover {
   color: white;
 }
+
 
 .footer-col p {
   margin: 20px 0;

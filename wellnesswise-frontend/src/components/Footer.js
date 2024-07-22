@@ -8,33 +8,33 @@ const Footer = () => {
         <div className="footer-col">
           <h4>Info</h4>
           <ul className="links">
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#appointment">Make an appointment</a></li>
-            <li><a href="#customer">Customers</a></li>
-            <li><a href="#services">Service</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li>About Us</li>
+            <li>Make an appointment</li>
+            <li>Customers</li>
+            <li>Service</li>
+            <li>Contact</li>
           </ul>
         </div>
 
         <div className="footer-col">
           <h4>Contact Us</h4>
           <ul className="links">
-            <li><a href="#email">meharaziz.1614@gmail.com</a></li>
-            <li><a href="#address">ABC Street X, J block</a></li>
-            <li><a href="#phone">+92 333 2525802</a></li>
-            <li><a href="#designs">Popular Designs</a></li>
-            <li><a href="#upload">New Uploads</a></li>
+            <li>meharaziz.1614@gmail.com</li>
+            <li>ABC Street X, J block</li>
+            <li>+92 333 2525802</li>
+            <li>Popular Designs</li>
+            <li>New Uploads</li>
           </ul>
         </div>
 
         <div className="footer-col">
           <h4>Legal</h4>
           <ul className="links">
-            <li><a href="#agreement">Customer Agreement</a></li>
-            <li><a href="#privacy">Privacy Policy</a></li>
-            <li><a href="#gdpr">GDPR</a></li>
-            <li><a href="#security">Security</a></li>
-            <li><a href="#kit">Health Kit</a></li>
+            <li>Customer Agreement</li>
+            <li>Privacy Policy</li>
+            <li>GDPR</li>
+            <li>Security</li>
+            <li>Health Kit</li>
           </ul>
         </div>
 
