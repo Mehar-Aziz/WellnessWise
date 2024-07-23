@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Connections.css';
+import './Connection.css';
 
 // Sample expert data
 const experts = [

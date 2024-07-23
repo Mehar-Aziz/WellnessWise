@@ -4,12 +4,14 @@ import homeImage from '../assets/Yoga practice-bro 1.png';
 import service1 from '../assets/placeholder (1).png';
 import aboutimg from '../assets/right.png';
 import contactimg from '../assets/undraw_contact_us_re_4qqt.svg';
-//import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 function Home() {
-
-
+    const navigate = useNavigate();
+    const handleConnection = () => {
+       navigate('connection')
+        };
 
     return (
         <div>
@@ -23,7 +25,7 @@ function Home() {
                     <button className="cta-button">Discover More</button>
                     <br />
                     <br />
-                    <button className='cta-button'>Book an Appointment</button>
+                    <button className='cta-button' onClick={handleConnection}>Book an Appointment</button>
                 </div>
             </div>
             {/* Image Section */}
@@ -89,7 +91,7 @@ function Home() {
     </div>
 </section>
 
-            {/* With Medical */}
+            {/* About us */}
             <section id="about-us" className="with-medical">
                 <div className="about-container">
                     <div className="row-about">
