@@ -14,7 +14,7 @@ const Profile = () => {
     navigate('/resources');
   };
   const handleAdvice = () => {
-    navigate('advice')
+    navigate('/advice')
   }
   return (
     <div className="user-profile">

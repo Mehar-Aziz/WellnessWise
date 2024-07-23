@@ -24,8 +24,7 @@ const Advice = () => {
   };
 
   const handleUpdatePreferences = () => {
-    // Logic to generate personalized advice based on userPreferences
-    // This is a placeholder, as the actual advice generation would be done on the backend
+    
     alert('Preferences updated! Advice will be adjusted accordingly.');
   };
 
@@ -37,7 +36,7 @@ const Advice = () => {
       <div className="preferences-form">
         <h2>Update Your Preferences</h2>
         <label>
-          Goal:
+          Goal:<br />
           <input
             type="text"
             name="goal"
@@ -47,7 +46,7 @@ const Advice = () => {
           />
         </label>
         <label>
-          Dietary Preference:
+          Dietary Preference:<br />
           <select
             name="dietaryPreference"
             value={userPreferences.dietaryPreference}
@@ -75,7 +74,6 @@ const Advice = () => {
 
       <div className="progress-tracker">
         <h2>Track Your Progress</h2>
-        <p>Functionality to track progress will be implemented here.</p>
       </div>
     </div>
   );

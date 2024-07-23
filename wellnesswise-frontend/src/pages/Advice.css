@@ -1,45 +1,61 @@
 .personalized-advice-page {
     font-family: Arial, sans-serif;
     padding: 20px;
+    margin-top: 100px;
+    margin-left: 360px;
+    margin-right: 320px;
   }
   
   .preferences-form {
     margin-bottom: 30px;
   }
   
+  .personalized-advice-page h1 {
+    margin-bottom: 10px;
+    color: #513125;
+    font-weight: 900;
+  }
+  .personalized-advice-page p{
+    margin-bottom: 10px;
+    color: #513125;
+  }
   .preferences-form h2 {
     margin-bottom: 10px;
+    color: #513125;
+    font-weight: 600;
   }
   
   .preferences-form label {
     display: block;
     margin-bottom: 10px;
+    color: #513125;
   }
   
   .preferences-form input[type="text"],
   .preferences-form select {
     padding: 10px;
+    background-color: #F4EDE5;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
     width: 100%;
-    max-width: 300px;
+    max-width: 500px;
     margin-top: 5px;
   }
   
   .preferences-form button {
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #c4715e;
     color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 2px;
     font-size: 16px;
     cursor: pointer;
     margin-top: 10px;
   }
   
   .preferences-form button:hover {
-    background-color: #0056b3;
+    background-color: #513125;
   }
   
   .advice-section {
@@ -48,6 +64,8 @@
   
   .advice-section h2 {
     margin-bottom: 10px;
+    color: #513125;
+    font-weight: 600;
   }
   
   .advice-section ul {
@@ -56,7 +74,7 @@
   }
   
   .advice-section li {
-    background-color: #f9f9f9;
+    background-color: #F4EDE5;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -69,5 +87,7 @@
   
   .progress-tracker h2 {
     margin-bottom: 10px;
+    color: #513125;
+    font-weight: 900;
   }
   
