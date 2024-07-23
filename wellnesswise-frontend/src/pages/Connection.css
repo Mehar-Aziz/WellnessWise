@@ -1,7 +1,11 @@
 .expert-connections-page {
-    margin-top: 100px;
-    padding-left: 360px;
-  }
+  margin: 100px auto;
+  padding: 0 20px;
+  max-width: 1200px;
+  text-align: center; 
+  padding-bottom: 100px;
+}
+
 .expert-connections-page h1 {
   font-weight: 900;
   font-size: 40px;
@@ -10,79 +14,139 @@
   padding-left: 5px;
   color: #513125;
 }
+
 .expert-connections-page p {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    color: #513125;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: #513125;
 }
-  
-  .booking-form {
-    margin-bottom: 30px;
-  }
-  
-  .booking-form h2 {
-    margin-bottom: 10px;
-    font-weight: 600;
-    color: #513125;
-  }
-  
-  .booking-form label {
-    display: block;
-    margin-bottom: 10px;
+
+.booking-form {
+  margin-bottom: 30px;
+}
+
+.booking-form h2 {
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #513125;
+}
+
+.booking-form label {
+  display: block;
+  margin-bottom: 10px;
+  padding-right: 20px;
+  font-weight: 500;
+  color: #513125;
+}
+
+.booking-form select,
+.booking-form input[type="date"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 5px;
+}
+
+.booking-form button {
+  padding: 10px 20px;
+  margin-right: 20px;
+  background-color: #c47a5e;
+  border-radius: 2px;
+  color: #fff;
+  border: none;
+  gap: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.booking-form button:hover {
+  background-color: #513125;
+}
+
+.video-chat-section {
+  padding-top: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.video-chat-section h2 {
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #513125;
+}
+
+.video-chat-section button {
+  padding: 10px 20px;
+  background-color: #c47a5e;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.video-chat-section button:hover {
+  background-color: #513125;
+}
+.booking-form,
+.video-chat-section {
+  margin: 0 auto;
+  max-width: 600px;
+}
+@media (max-width: 1200px) {
+  .expert-connections-page {
+    padding-left: 20px;
     padding-right: 20px;
-    font-weight: 500;
-    color: #513125;
   }
-  
-  .booking-form select, .booking-form input[type="date"] {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 2px;
-    font-size: 16px;
+
+  .booking-form select,
+  .booking-form input[type="date"] {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .expert-connections-page h1 {
+    font-size: 32px;
+  }
+
+  .booking-form label {
+    padding-right: 0;
+  }
+
+  .booking-form button,
+  .video-chat-section button {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .expert-connections-page {
+   position: relative;
+   top:80px;
+  }
+  .expert-connections-page h1 {
+    font-size: 28px;
+  }
+
+  .expert-connections-page {
+    margin-top: 50px;
+    padding: 0 10px;
+  }
+
+  .booking-form select,
+  .booking-form input[type="date"] {
+    font-size: 14px;
+  }
+
+  .booking-form button,
+  .video-chat-section button {
     width: 100%;
-    max-width: 300px;
-    margin-top: 5px;
-  }
-  
-  .booking-form button {
-    padding: 10px 20px;
-    margin-right: 20px;
-    background-color: #c47a5e;
-    border-radius: 2px;
-    color: #fff;
-    border: none;
-    gap: 20px;
-    font-size: 16px;
-    cursor: pointer;
     margin-top: 10px;
   }
-  
-  .booking-form button:hover {
-    background-color: #513125;
-  }
-  
-  .video-chat-section {
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-  
-  .video-chat-section h2 {
-    margin-bottom: 10px;
-    font-weight: 600;
-    color: #513125;
-  }
-  
-  .video-chat-section button {
-    padding: 10px 20px;
-    background-color: #c47a5e;
-    color: #fff;
-    border: none;
-    border-radius: 2px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .video-chat-section button:hover {
-    background-color: #513125;
-  }
-  
+}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Advice.css';
+import adviceim from '../assets/undraw_random_thoughts_re_cob6.svg'
 
 const initialAdvice = [
   { id: 1, advice: 'Drink more water and stay hydrated throughout the day.' },
@@ -29,7 +30,16 @@ const Advice = () => {
   };
 
   return (
-    <div className="personalized-advice-page">
+    <div className="personalized-advice-page"  style={{ 
+        backgroundImage: `linear-gradient(
+          rgba(251, 247, 240, 1),
+          rgba(251, 247, 240, 0.8)
+          
+        ), url(${adviceim})`,
+        backgroundSize: '80%',
+        backgroundPosition: 'center center',
+        backgroundRepeat: 'no-repeat'
+      }}>
       <h1>Personalized Advice</h1>
       <p>Receive personalized wellness advice based on your profile and goals.</p>
 

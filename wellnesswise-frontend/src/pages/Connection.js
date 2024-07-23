@@ -39,7 +39,7 @@ const Connections = () => {
     <div className="expert-connections-page" style={{ 
         backgroundImage: `linear-gradient(
           rgba(251, 247, 240, 1),
-          rgba(251, 247, 240, 0.5)
+          rgba(251, 247, 240, 0.8)
           
         ), url(${connectionimg})`,
         backgroundSize: 'cover',
