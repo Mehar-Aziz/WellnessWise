@@ -3,22 +3,30 @@
     padding: 20px;
     margin: 100px auto;
     max-width: 1200px;
-    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .preferences-form {
     margin-bottom: 30px;
+    width: 100%;
+    max-width: 500px;
   }
   
   .personalized-advice-page h1 {
     margin-bottom: 10px;
     color: #513125;
     font-weight: 900;
+    text-align: center;
   }
   
   .personalized-advice-page p {
     margin-bottom: 10px;
     color: #513125;
+    text-align: center;
   }
   
   .preferences-form h2 {
@@ -41,8 +49,8 @@
     border-radius: 4px;
     font-size: 16px;
     width: 100%;
-    max-width: 500px;
     margin-top: 5px;
+    box-sizing: border-box;
   }
   
   .preferences-form button {
@@ -62,6 +70,8 @@
   
   .advice-section {
     margin-top: 30px;
+    width: 100%;
+    max-width: 500px;
   }
   
   .advice-section h2 {
@@ -73,6 +83,7 @@
   .advice-section ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
   }
   
   .advice-section li {
@@ -81,12 +92,13 @@
     border: 1px solid #ddd;
     border-radius: 4px;
     margin-bottom: 5px;
-    margin-left: 330px;
-    margin-right: 330px;
+    box-sizing: border-box;
   }
   
   .progress-tracker {
     margin-top: 30px;
+    width: 100%;
+    max-width: 500px;
   }
   
   .progress-tracker h2 {
@@ -95,6 +107,7 @@
     font-weight: 900;
   }
   
+  /* Media Queries for Responsiveness */
   @media (max-width: 1200px) {
     .personalized-advice-page {
       margin-left: 30px;
@@ -110,6 +123,11 @@
   }
   
   @media (max-width: 480px) {
+    .personalized-advice-page {
+        margin-top: 100px;
+        position: relative;
+        left: -30px;
+      }
     .preferences-form input[type="text"],
     .preferences-form select {
       font-size: 14px;
@@ -118,6 +136,10 @@
     .preferences-form button {
       padding: 8px 16px;
       font-size: 14px;
+    }
+  
+    .advice-section ul {
+      padding: 0 10px;
     }
   }
   
