@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Connection.css';
+import connectionimg from '../assets/undraw_online_re_x00h.svg'
 
 // Sample expert data
 const experts = [
@@ -35,7 +36,15 @@ const Connections = () => {
   };
 
   return (
-    <div className="expert-connections-page">
+    <div className="expert-connections-page" style={{ 
+        backgroundImage: `linear-gradient(
+          rgba(251, 247, 240, 1),
+          rgba(251, 247, 240, 0.5)
+          
+        ), url(${connectionimg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center center'
+      }}>
       <h1>Expert Connections</h1>
       <p>Connect with WELLNESS experts for support.</p>
 
