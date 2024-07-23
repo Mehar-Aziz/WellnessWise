@@ -10,6 +10,7 @@ import CreateProfile1 from "./components/CreateProfile1";
 import Profile from "./pages/profile";
 import { UserProvider } from "./context/UserContext";
 import Resources from "./pages/Resources";
+import Connections from "./pages/Connection";
 
 
 
@@ -31,11 +32,11 @@ function App() {
           <Route path="/" exact element={<Home />} />
           <Route path="/login" element={<Login />} />
            <Route path="/register" element={<Registration />} />
-          {/* Define other routes for different pages/components */}
           <Route path="/button" element={<CreateProfileButton funcNav={setShowNav} />} />
           <Route path="/createprofile" element={<CreateProfile1 />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/resources" element={<Resources />} />
+          <Route path="/connection" element={<Connections />} />
         </Routes>
 
         { showNav &&
