@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import './Navbar.css';
 import { Link } from "react-router-dom";
-import logo from '../assets/Screenshot_2024-07-22_120232-removebg-preview.png'; // Adjust the path based on your project structure
+import logo from '../assets/Screenshot_2024-07-22_120232-removebg-preview.png';
 
 function Navbar() {
+
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -15,10 +16,11 @@ function Navbar() {
     setMenuOpen(!menuOpen);
   };
 
-  // Function to close the menu
+ 
   const handleLinkClick = () => {
     setMenuOpen(false);
   };
+
 
   return (
     <nav>
@@ -32,7 +34,7 @@ function Navbar() {
         <div></div>
       </div>
       <ul className={menuOpen ? 'open' : ''}>
-        <li><Link to="home" className="hover-underline-animation" onClick={handleLinkClick}>Home</Link></li>
+        <li><Link to={"home"} className="hover-underline-animation" onClick={handleLinkClick} >Home</Link></li>
         <li><a href="#services" className="hover-underline-animation" onClick={handleLinkClick}>Services</a></li>
         <li><a href="#about-us" className="hover-underline-animation" onClick={handleLinkClick}>About Us</a></li>
         <li><a href="#contact-us" className="hover-underline-animation" onClick={handleLinkClick}>Contact Us</a></li>

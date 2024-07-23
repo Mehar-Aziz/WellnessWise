@@ -1,3 +1,4 @@
+ /* General styles */
 * {
   box-sizing:border-box;
 }
@@ -186,72 +187,7 @@ textarea {
       transform: rotate(360deg);
   }
 }
-@media (max-width: 576px) {
-  #home {
-    flex-direction: column;
-    padding: 20px;
-    align-items: center;
-  }
 
-  .homeImage {
-    width: 100%;
-    max-width: 100%;
-    top: 0;
-    left: 0;
-    margin-bottom: 20px;
-  }
-
-  .homeMessage {
-    padding: 10px;
-    text-align: center;
-  }
-
-  .homeMessage h1 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    top: 0;
-    left: 0;
-  }
-
-  .homeMessage p {
-    font-size: 0.875rem;
-    margin-right: 0;
-    left: 0;
-    top: 0;
-  }
-
-  .cta-button {
-    font-size: 0.875rem;
-    padding: 8px 16px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .homeImage {
-    max-width: 70%;
-    margin: 0 auto;
-    top: 0;
-    left: 0;
-  }
-
-  .homeMessage h1 {
-    font-size: 2.5rem;
-  }
-
-  .homeMessage p {
-    font-size: 1rem;
-  }
-}
-
-@media (min-width: 1025px) and (max-width: 1440px) {
-  .homeMessage h1 {
-    font-size: 3rem;
-  }
-
-  .homeMessage p {
-    font-size: 1.125rem;
-  }
-}
 @media (max-width: 768px) {
   #home {
       flex-direction: column;}

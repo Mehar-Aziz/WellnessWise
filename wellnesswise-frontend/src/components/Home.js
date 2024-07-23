@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom';
 function Home() {
     const navigate = useNavigate();
     const handleConnection = () => {
-       navigate('connection')
+       navigate('/connection')
         };
 
     return (

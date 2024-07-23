@@ -30,7 +30,7 @@ function App() {
         </nav>
         }
         <Routes>
-          <Route path="/" exact element={<Home />} />
+          <Route path="/home" exact element={<Home />} />
           <Route path="/login" element={<Login />} />
            <Route path="/register" element={<Registration />} />
           <Route path="/button" element={<CreateProfileButton funcNav={setShowNav} />} />
