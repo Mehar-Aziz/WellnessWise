@@ -27,7 +27,7 @@ const Connections = () => {
 
   const handleBookSession = () => {
     if (selectedExpert && sessionDate) {
-      // Handle booking logic here
+      //booking logic here
       alert(`Session booked with expert ID ${selectedExpert} on ${sessionDate}`);
     } else {
       alert('Please select an expert and choose a date.');
@@ -37,12 +37,12 @@ const Connections = () => {
   return (
     <div className="expert-connections-page">
       <h1>Expert Connections</h1>
-      <p>Connect with wellness experts for support. Book sessions and access video/chat functionality.</p>
+      <p>Connect with WELLNESS experts for support.</p>
 
       <div className="booking-form">
         <h2>Book a Session</h2>
         <label>
-          Select Expert:
+          Select Expert:<br />
           <select onChange={handleExpertSelect} value={selectedExpert}>
             <option value="">--Select an Expert--</option>
             {experts.map((expert) => (
@@ -67,7 +67,7 @@ const Connections = () => {
 
       <div className="video-chat-section">
         <h2>Video and Chat</h2>
-        <p>Integrate with video conferencing APIs to start your session.</p>
+        <p>Want to Video Chat with Experts?</p>
         <button onClick={() => alert('Video/Chat functionality not implemented yet.')}>
           Start Video/Chat Session
         </button>

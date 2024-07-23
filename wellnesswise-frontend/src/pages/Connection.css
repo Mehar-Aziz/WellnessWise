@@ -1,7 +1,20 @@
 .expert-connections-page {
-    font-family: Arial, sans-serif;
-    padding: 20px;
+    margin-top: 100px;
+    padding-left: 360px;
   }
+.expert-connections-page h1 {
+  font-weight: 900;
+  font-size: 40px;
+  text-decoration: underline;
+  letter-spacing: 2px;
+  padding-left: 5px;
+  color: #513125;
+}
+.expert-connections-page p {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: #513125;
+}
   
   .booking-form {
     margin-bottom: 30px;
@@ -9,17 +22,22 @@
   
   .booking-form h2 {
     margin-bottom: 10px;
+    font-weight: 600;
+    color: #513125;
   }
   
   .booking-form label {
     display: block;
     margin-bottom: 10px;
+    padding-right: 20px;
+    font-weight: 500;
+    color: #513125;
   }
   
   .booking-form select, .booking-form input[type="date"] {
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 2px;
     font-size: 16px;
     width: 100%;
     max-width: 300px;
@@ -28,38 +46,43 @@
   
   .booking-form button {
     padding: 10px 20px;
-    background-color: #007BFF;
+    margin-right: 20px;
+    background-color: #c47a5e;
+    border-radius: 2px;
     color: #fff;
     border: none;
-    border-radius: 4px;
+    gap: 20px;
     font-size: 16px;
     cursor: pointer;
     margin-top: 10px;
   }
   
   .booking-form button:hover {
-    background-color: #0056b3;
+    background-color: #513125;
   }
   
   .video-chat-section {
     margin-top: 30px;
+    margin-bottom: 30px;
   }
   
   .video-chat-section h2 {
     margin-bottom: 10px;
+    font-weight: 600;
+    color: #513125;
   }
   
   .video-chat-section button {
     padding: 10px 20px;
-    background-color: #28a745;
+    background-color: #c47a5e;
     color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 2px;
     font-size: 16px;
     cursor: pointer;
   }
   
   .video-chat-section button:hover {
-    background-color: #218838;
+    background-color: #513125;
   }
   
