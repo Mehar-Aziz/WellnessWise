@@ -7,7 +7,7 @@
   margin-left: 390px;
   position: relative;
   top: -35px;
-  left: -6px;
+  left: -110px;
 }
 
 .addBtn {
@@ -33,7 +33,7 @@
 .gender-select select {
   position: relative;
   left: 47px;
-  width: 104%;
+  width: 87%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
