@@ -1,9 +1,8 @@
 .personalized-advice-page {
     font-family: Arial, sans-serif;
     padding: 20px;
-    margin-top: 100px;
-    margin-left: 360px;
-    margin-right: 320px;
+    margin: 100px auto;
+    max-width: 1200px;
   }
   
   .preferences-form {
@@ -15,10 +14,12 @@
     color: #513125;
     font-weight: 900;
   }
-  .personalized-advice-page p{
+  
+  .personalized-advice-page p {
     margin-bottom: 10px;
     color: #513125;
   }
+  
   .preferences-form h2 {
     margin-bottom: 10px;
     color: #513125;
@@ -89,5 +90,31 @@
     margin-bottom: 10px;
     color: #513125;
     font-weight: 900;
+  }
+  
+  @media (max-width: 1200px) {
+    .personalized-advice-page {
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .personalized-advice-page {
+      margin-top: 50px;
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .preferences-form input[type="text"],
+    .preferences-form select {
+      font-size: 14px;
+    }
+  
+    .preferences-form button {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
   }
   
