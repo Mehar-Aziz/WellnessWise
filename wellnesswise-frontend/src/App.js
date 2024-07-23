@@ -11,6 +11,7 @@ import Profile from "./pages/profile";
 import { UserProvider } from "./context/UserContext";
 import Resources from "./pages/Resources";
 import Connections from "./pages/Connection";
+import Advice from "./pages/Advice";
 
 
 
@@ -37,6 +38,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/connection" element={<Connections />} />
+          <Route path="/advice" element={<Advice />} />
         </Routes>
 
         { showNav &&

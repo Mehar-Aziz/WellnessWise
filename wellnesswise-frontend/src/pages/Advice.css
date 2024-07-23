@@ -1,0 +1,73 @@
+.personalized-advice-page {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .preferences-form {
+    margin-bottom: 30px;
+  }
+  
+  .preferences-form h2 {
+    margin-bottom: 10px;
+  }
+  
+  .preferences-form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .preferences-form input[type="text"],
+  .preferences-form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 5px;
+  }
+  
+  .preferences-form button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .preferences-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .advice-section {
+    margin-top: 30px;
+  }
+  
+  .advice-section h2 {
+    margin-bottom: 10px;
+  }
+  
+  .advice-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .advice-section li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 5px;
+  }
+  
+  .progress-tracker {
+    margin-top: 30px;
+  }
+  
+  .progress-tracker h2 {
+    margin-bottom: 10px;
+  }
+  

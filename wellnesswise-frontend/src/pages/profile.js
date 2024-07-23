@@ -13,7 +13,9 @@ const Profile = () => {
     e.preventDefault();
     navigate('/resources');
   };
-
+  const handleAdvice = () => {
+    navigate('advice')
+  }
   return (
     <div className="user-profile">
       <h1>USER PROFILE</h1>
@@ -24,7 +26,7 @@ const Profile = () => {
         <p>{userData.address}</p>
         <div className="button-group">
           <button className="follow-btn" onClick={handleResources}>RESOURCES</button>
-          <button className="message-btn">GET ADVICE
+          <button className="message-btn" onClick={handleAdvice}>GET ADVICE
           </button>
         </div>
       </div>
