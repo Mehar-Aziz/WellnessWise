@@ -54,18 +54,37 @@ const handleRemoveGoal = (index) => {
     setGoals(newGoals);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setUserData(prevData => ({
-      ...prevData,
-      gender,
-      education,
-      birth,
-      hobbies,
-      goals,
-    }));
+    try {
+      const userId = localStorage.getItem('userId');
+      if(!userId) throw new Error('User not registered')
+      const response = await fetch('http://localhost:3000/api/users/createprofile',{
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ userId, gender, education, birth, age, hobbies, goals })
+      });
+    if (response.ok){
+      console.log('Profile created successfully');
+      navigate('/profile'); 
+      setUserData(prevData => ({
+        ...prevData,
+        gender,
+        education,
+        birth,
+        hobbies,
+        goals,
+      }));
+    } else {
+      console.error('failed to create profiel')
+    }
+  } catch (error) {
+    console.error('error during profile creation', error);
+  }
     
-    navigate('/profile');
+    
   
     // Reset form fields
     setEducation('');

@@ -28,6 +28,8 @@ const Registration = () => {
     });
     
     if (response.ok){
+      const result = await response.json();
+      localStorage.setItem('userId', result.userId);
       console.log('user registered succesfully')
      // Save user data to context
     setUserData(prevData => ({
