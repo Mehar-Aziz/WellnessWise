@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react';
-//import { useNavigate } from 'react-router-dom';
 import './Registration.css';
 import './Login.css'; 
 import CreateProfileButton from './CreateProfileButton';
@@ -17,8 +16,19 @@ const Registration = () => {
   const [address, setAddress] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    try {
+    const response = await fetch("http://localhost:3000/api/users/register", {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ name, email, phone,address, password}),
+    });
+    
+    if (response.ok){
+      console.log('user registered succesfully')
      // Save user data to context
     setUserData(prevData => ({
       ...prevData,
@@ -33,8 +43,13 @@ const Registration = () => {
     setPhone('');
     setAddress('');
     setPassword('');
-
     setShowModal(true);
+  } else {
+    console.error('Failed to register user');
+  }
+} catch (error) {
+  console.error('Error during registration:', error)
+}
 
   };
 
