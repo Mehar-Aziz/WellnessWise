@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer"; 
@@ -18,7 +18,18 @@ import Advice from "./pages/Advice";
 function App() {
 
   const [showNav, setShowNav] = useState(true);
+  const [backendData, setBackendData] = useState([{}])
 
+  useEffect(() => {
+    fetch("/api").then(
+      response => response.json()
+    ).then(
+      data => {
+        setBackendData(data)
+      }
+    )
+  }, [])
+  
   return (
     <UserProvider>
     <Router>
