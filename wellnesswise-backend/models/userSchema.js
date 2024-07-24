@@ -9,6 +9,14 @@ const UserSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true,
+    },
+    profile: {
+    gender: String,
+    education: String,
+    birth: Date,
+    age: Number,
+    hobbies: [String],
+    goals: [String]
     }
 });
 
