@@ -30,6 +30,33 @@ router.post('/createprofile', async (req, res) => {
       res.status(500).json({ message: 'Failed to create profile', error });
     }
   });
-//other
+
+//login
+router.post('/login', async (req, res) => {
+  try {
+      const { emailOrPhone, password } = req.body;
+      console.log('Login Attempt:', emailOrPhone); // Debugging log
+
+      const user = await UserModel.findOne({
+          $or: [{ email: emailOrPhone }, { phone: emailOrPhone }]
+      });
+
+      if (!user) {
+          return res.status(401).json({ message: 'User not found' });
+      }
+
+      const isMatch = await bcrypt.compare(password, user.password);
+
+      if (!isMatch) {
+          return res.status(401).json({ message: 'Invalid credentials' });
+      }
+
+      res.status(200).json({ message: 'Login successful' });
+  } catch (error) {
+      console.error('Login Error:', error);
+      res.status(500).json({ message: 'Error logging in', error });
+  }
+});
+
 
 export default router;
