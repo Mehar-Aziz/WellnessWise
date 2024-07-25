@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import './Registration.css';
 import './Login.css'; 
 import './CreateProfile.css'
@@ -17,6 +17,7 @@ const CreateProfile1 = () => {
   const [goals, setGoals] = useState(['']);
 
 
+  
 
   const handleHobbyChange = (index, event) => {
     const newHobbies = hobbies.slice();
@@ -78,7 +79,7 @@ const handleRemoveGoal = (index) => {
         goals,
       }));
     } else {
-      console.error('failed to create profiel')
+      console.error('failed to create profiel');
     }
   } catch (error) {
     console.error('error during profile creation', error);
@@ -90,8 +91,8 @@ const handleRemoveGoal = (index) => {
     setEducation('');
     setAge('');
     setBirth('');
-    setHobbies('');
-    setGoals('')
+    setHobbies(['']);
+    setGoals([''])
     setGender('');
   
 
