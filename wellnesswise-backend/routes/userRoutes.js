@@ -15,21 +15,21 @@ router.post('/register', async (req, res) => {
     }
 });
 
-//profile creation
-router.post('/profile', async (req, res) =>{
+// Profile creation
+router.post('/createprofile', async (req, res) => {
     try {
-        const { userId, gender, education, birth, age, hobbies, goals } = req.body;
-        const user = await users.findById(userId);
-        if(!user) {
-            return res.status(404).json({ message: 'User not found'});
-        }
-        user.profile = { gender, education, birth, age, hobbies, goals };
-        await user.save();
-        res.status(200).json({ message: 'profile created successfully' });
+      const { userId, gender, education, birth, age, hobbies, goals } = req.body;
+      const user = await UserModel.findById(userId);
+      if (!user) {
+        return res.status(404).json({ message: 'User not found' });
+      }
+      user.profile = { gender, education, birth, age, hobbies, goals };
+      await user.save();
+      res.status(200).json({ message: 'Profile created successfully' });
     } catch (error) {
-        res.status(500).json({ message: 'Failed to create profile', error})
+      res.status(500).json({ message: 'Failed to create profile', error });
     }
-});
+  });
 //other
 
 export default router;
