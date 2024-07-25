@@ -1,5 +1,7 @@
 import express from 'express';
 import UserModel from '../models/userSchema.js';
+import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
 
 const router = express.Router();
 
@@ -34,27 +36,30 @@ router.post('/createprofile', async (req, res) => {
 //login
 router.post('/login', async (req, res) => {
   try {
-      const { emailOrPhone, password } = req.body;
-      console.log('Login Attempt:', emailOrPhone); // Debugging log
+    const { emailOrPhone, password } = req.body;
+    console.log('Login Attempt:', emailOrPhone);
 
-      const user = await UserModel.findOne({
-          $or: [{ email: emailOrPhone }, { phone: emailOrPhone }]
-      });
+    const user = await UserModel.findOne({
+      $or: [{ email: emailOrPhone }, { phone: emailOrPhone }]
+    });
 
-      if (!user) {
-          return res.status(401).json({ message: 'User not found' });
-      }
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
 
-      const isMatch = await bcrypt.compare(password, user.password);
+    const isMatch = await bcrypt.compare(password, user.password);
 
-      if (!isMatch) {
-          return res.status(401).json({ message: 'Invalid credentials' });
-      }
+    if (!isMatch) {
+      return res.status(401).json({ message: 'Invalid credentials' });
+    }
 
-      res.status(200).json({ message: 'Login successful' });
+    //generate jwt token
+    const token = jwt.sign({ userId: user._id }, 'your_jwt_secret', { expiresIn: '1h' });
+
+    res.status(200).json({ message: 'Login successful', token, userId: user._id });
   } catch (error) {
-      console.error('Login Error:', error);
-      res.status(500).json({ message: 'Error logging in', error });
+    console.error('Login Error:', error);
+    res.status(500).json({ message: 'Error logging in', error: error.message });
   }
 });
 
