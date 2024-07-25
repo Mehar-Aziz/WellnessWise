@@ -10,10 +10,33 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-        console.log('Login successful!');
-        navigate('/profile');
-      
+    setError('');
+    try {
+      const response = await fetch('http://localhost:3000/api/users/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          emailOrPhone,
+          password
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || 'An error occurred');
+      }
+
+      console.log('Login successful!');
+      localStorage.setItem('token', data.token);
+      localStorage.setItem('userId', data.userId);
+      navigate('/profile');
+    } catch (error) {
+      setError(error.message);
+    }
+
     // Reset form fields
     setEmailOrPhone('');
     setPassword('');
@@ -24,6 +47,7 @@ const Login = () => {
       <div className="wrapper">
         <div className="title"><span>LOGIN</span></div>
         <form onSubmit={handleSubmit}>
+        {error && <div className="error-message">{error}</div>}
           <div className="row">
             <i className="fas fa-user"></i>
             <input

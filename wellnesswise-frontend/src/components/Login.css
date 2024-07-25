@@ -117,3 +117,8 @@ form .signup-link a:hover{
     font-size: 16px; 
   }
 }
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+  text-align: center;
+}
