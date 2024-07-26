@@ -17,7 +17,9 @@ const UserSchema = new mongoose.Schema({
     age: Number,
     hobbies: [String],
     goals: [String]
-    }
+    },
+    resetPasswordToken: String,
+    resetPasswordExpires: Date,
 });
 
 //hashing password for privacy and safety/security.
