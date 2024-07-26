@@ -10,7 +10,7 @@ const PasswordResetForm = ({ onSubmit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className='forgot-password-form' onSubmit={handleSubmit}>
       <input
         type="email"
         value={email}
@@ -18,7 +18,7 @@ const PasswordResetForm = ({ onSubmit }) => {
         placeholder="Enter your email"
         required
       />
-      <button type="submit">Reset Password</button>
+      <button className='reset-btn' type="submit">Reset Password</button>
     </form>
   );
 };

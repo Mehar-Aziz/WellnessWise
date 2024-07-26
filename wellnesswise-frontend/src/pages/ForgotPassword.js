@@ -1,6 +1,7 @@
 import React from 'react';
 import PasswordResetForm from '../components/PasswordResetForm';
 import MessageDisplay from '../components/MessageDisplay';
+import './ForgotPassword.css'
 
 const ForgotPasswordPage = () => {
   const [message, setMessage] = React.useState('');
@@ -20,8 +21,8 @@ const ForgotPasswordPage = () => {
   };
 
   return (
-    <div>
-      <h1>Forgot Password</h1>
+    <div className='forgotPage'>
+      <h1>Forgot Password?</h1>
       <PasswordResetForm onSubmit={handleSubmit} />
       <MessageDisplay message={message} />
     </div>
