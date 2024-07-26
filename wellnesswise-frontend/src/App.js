@@ -12,6 +12,7 @@ import { UserProvider } from "./context/UserContext";
 import Resources from "./pages/Resources";
 import Connections from "./pages/Connection";
 import Advice from "./pages/Advice";
+import ForgotPasswordPage from "./pages/ForgotPassword";
 
 
 
@@ -49,6 +50,7 @@ function App() {
         <Routes>
           <Route path="/home" exact element={<Home />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/forgot-password" element={<ForgotPasswordPage />} />
            <Route path="/register" element={<Registration />} />
           <Route path="/button" element={<CreateProfileButton funcNav={setShowNav} />} />
           <Route path="/createprofile" element={<CreateProfile1 />} />
