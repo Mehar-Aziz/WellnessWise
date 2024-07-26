@@ -40,7 +40,6 @@ const Home = () => {
         <div>
             {/* messafe */}
             <div id='home'>
-            {/* Content Section */}
             <div className="homeMessage">
                 <h1>Bend Your Mind,<br />Inspire Yourself !</h1>
                 <p>Your journey to a healthier, happier life begins here. At Wellness Wise, we’re dedicated to helping you achieve optimal well-being with our comprehensive health and wellness solutions.</p>
