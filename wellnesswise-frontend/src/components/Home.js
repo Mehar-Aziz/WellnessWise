@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Home.css';
 import homeImage from '../assets/Yoga practice-bro 1.png';
 import service1 from '../assets/placeholder (1).png';
@@ -7,8 +7,31 @@ import contactimg from '../assets/undraw_contact_us_re_4qqt.svg';
 import { useNavigate } from 'react-router-dom';
 
 
-function Home() {
+const Home = () => {
     const navigate = useNavigate();
+
+    useEffect(() => {
+        const cards = document.querySelectorAll('.feature-card');
+    
+        const onScroll = () => {
+          const triggerBottom = window.innerHeight / 5 * 4;
+    
+          cards.forEach(card => {
+            const cardTop = card.getBoundingClientRect().top;
+    
+            if (cardTop < triggerBottom) {
+              card.classList.add('visible');
+            } else {
+              card.classList.remove('visible');
+            }
+          });
+        };
+    
+        window.addEventListener('scroll', onScroll);
+        onScroll();
+    
+        return () => window.removeEventListener('scroll', onScroll);
+      }, []);
     const handleConnection = () => {
        navigate('/connection')
         };
