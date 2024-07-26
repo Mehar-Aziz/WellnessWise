@@ -68,7 +68,7 @@ const Login = () => {
               required
             />
           </div>
-          <div className="pass"><a><Link to='/forgot-password'>Forgot password?</Link></a></div>
+          <div className="pass"><Link to='/forgot-password'>Forgot password?</Link></div>
           <div className="row button">
             <input type="submit" value="SIGN IN" />
           </div>
