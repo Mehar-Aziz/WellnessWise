@@ -1,14 +1,18 @@
 import React from 'react';
 import PasswordResetForm from '../components/PasswordResetForm';
 import MessageDisplay from '../components/MessageDisplay';
-import './ForgotPassword.css'
+import './ForgotPassword.css';
+
 
 const ForgotPasswordPage = () => {
   const [message, setMessage] = React.useState('');
 
   const handleSubmit = async (email) => {
+    console.log('Received forgot password request');
+  console.log('Email User:', process.env.EMAIL_USER);
+  console.log('Email Pass:', process.env.EMAIL_PASS);
     try {
-      const response = await fetch('http://localhost:3000/api/users/forgot-password', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/users/forgot-password`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),
