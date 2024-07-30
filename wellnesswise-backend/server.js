@@ -2,12 +2,10 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 //import bodyParser from 'body-parser';
-import userRoutes from './routes/userRoutes.js';
 import dotenv from 'dotenv';
+dotenv.config('.env');
+import userRoutes from './routes/userRoutes.js';
 
-
-
-dotenv.config();
 
 const app = express();
 app.use(cors());
@@ -25,11 +23,8 @@ app.get('/api', (req, res) => {
   //user route
 app.use('/api/users', userRoutes);
 
-// Error handling middleware
-app.use((err, req, res, next) => {
-    console.error(err.stack);
-    res.status(500).send('Something broke!');
-  });
+
+
 
 
 const port = process.env.PORT || 3000;

@@ -20,6 +20,11 @@ const UserSchema = new mongoose.Schema({
     },
     resetPasswordToken: String,
     resetPasswordExpires: Date,
+    verificationToken: String,
+    isVerified: {
+    type: Boolean,
+    default: false
+  }
 });
 
 //hashing password for privacy and safety/security.
