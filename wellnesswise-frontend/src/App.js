@@ -13,6 +13,8 @@ import Resources from "./pages/Resources";
 import Connections from "./pages/Connection";
 import Advice from "./pages/Advice";
 import ForgotPasswordPage from "./pages/ForgotPassword";
+import ResetPassword from "./pages/ResetPass";
+import VerifyEmail from "./pages/EmailVerification";
 
 
 
@@ -22,7 +24,7 @@ function App() {
   const [backendData, setBackendData] = useState([{}])
 
   useEffect(() => {
-    fetch("http://localhost:3000/api")  // Ensure this endpoint is correct
+    fetch("http://localhost:3000/api") 
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok ' + response.statusText);
@@ -51,6 +53,8 @@ function App() {
           <Route path="/home" exact element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+          <Route path="/reset-password/:token" element={<ResetPassword />} />
+          <Route path="/verify/:token" element={<VerifyEmail />} />
            <Route path="/register" element={<Registration />} />
           <Route path="/button" element={<CreateProfileButton funcNav={setShowNav} />} />
           <Route path="/createprofile" element={<CreateProfile1 />} />
