@@ -1,140 +1,58 @@
-.wellness-page {
+.nutritionix-container {
   padding: 20px;
-  position: relative;
-  margin-bottom: 100px;
-  top: 100px;
-  background-color: #fbf7f0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.error {
+  color: red;
+}
+
+.loading {
+  font-size: 18px;
 }
 
 .search-bar {
-  margin-left: 52px;
-  margin-bottom: 20px;
-}
-
-.search-bar input {
-  width: 94%;
+  width: 100%;
   padding: 10px;
-  border: 1px solid #513125;
+  margin-bottom: 20px;
   font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-.resource-list {
+.card-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
-  margin-left: 50px;
-  margin-bottom: 80px;
+  gap: 20px;
 }
 
-.resource-item {
-  background-color: #F4EDE5;
+.card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
   border-radius: 10px;
-  border: none;
   padding: 20px;
-  width: 300px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
+  width: calc(33.333% - 20px); /* 3 cards per row, adjust as needed */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.resource-item h3 {
-  margin: 0;
-  font-size: 18px;
-  color: #513125;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-decoration: underline;
+.card h2 {
+  margin-top: 0;
+  font-size: 20px;
 }
 
-.resource-item .category {
-  color: #513125;
-  font-weight: 600;
-}
-
-.resource-item p {
-  margin: 5px 0 0;
-  color: #999999;
-  word-spacing: 2px;
-  font-size: 15px;
-}
-
-@media (max-width: 1200px) {
-  .search-bar {
-    margin-left: 20px;
-  }
-
-  .resource-list {
-    margin-left: 20px;
-    margin-bottom: 60px;
-  }
-
-  .resource-item {
-    width: 250px;
-  }
-}
-
-@media (max-width: 992px) {
-  .search-bar {
-    margin-left: 0;
-  }
-
-  .resource-list {
-    margin-left: 0;
-    margin-bottom: 40px;
-  }
-
-  .resource-item {
-    width: 220px;
-  }
+.card p {
+  margin: 5px 0;
 }
 
 @media (max-width: 768px) {
-  .wellness-page {
-    top: 50px;
-  }
-
-  .search-bar {
-    margin-left: 0;
-    margin-bottom: 15px;
-  }
-
-  .resource-list {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .resource-item {
-    width: 100%;
-  }
-
-  .resource-item h3 {
-    font-size: 16px;
-  }
-
-  .resource-item p {
-    font-size: 14px;
+  .card {
+    width: calc(50% - 20px); /* 2 cards per row on smaller screens */
   }
 }
 
-@media (max-width: 576px) {
-  .wellness-page {
-    top: 100px;
-  }
-
-  .search-bar input {
-    width: 100%;
-    font-size: 14px;
-  }
-
-  .resource-item {
-    width: 100%;
-    padding: 15px;
-  }
-
-  .resource-item h3 {
-    font-size: 14px;
-  }
-
-  .resource-item p {
-    font-size: 12px;
+@media (max-width: 480px) {
+  .card {
+    width: 100%; /* 1 card per row on very small screens */
   }
 }
