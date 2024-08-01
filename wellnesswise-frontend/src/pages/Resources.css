@@ -1,60 +1,173 @@
-.nutritionix-container {
-  position: relative;
-  top: 80px;
+.wellness-page {
   padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.error {
-  color: red;
-}
-
-.loading {
-  font-size: 18px;
+  position: relative;
+  top: 100px;
+padding: 20px;
+position: relative;
+margin-bottom: 100px;
+top: 100px;
+background-color: #fbf7f0;
 }
 
 .search-bar {
-  width: 100%;
-  padding: 10px;
+margin-left: 52px;
+margin-bottom: 20px;
+}
+
+.search-bar input {
+width: 94%;
+padding: 10px;
+border: 1px solid #513125;
+font-size: 16px;
+}
+
+.resource-list {
+display: flex;
+flex-wrap: wrap;
+gap: 30px;
+margin-left: 50px;
+margin-bottom: 80px;
+}
+
+.resource-item {
+background-color: #F4EDE5;
+border-radius: 10px;
+border: none;
+padding: 20px;
+width: 300px;
+box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+cursor: pointer;
+}
+
+.resource-item h3 {
+margin: 0;
+font-size: 18px;
+color: #513125;
+font-weight: 600;
+letter-spacing: 2px;
+text-decoration: underline;
+}
+
+.resource-item .category {
+color: #513125;
+font-weight: 600;
+}
+
+.resource-item p {
+margin: 5px 0 0;
+color: #999999;
+word-spacing: 2px;
+font-size: 15px;
+}
+
+@media (max-width: 1200px) {
+.search-bar {
+  margin-left: 20px;
+}
+
+.resource-list {
+  margin-left: 20px;
+  margin-bottom: 60px;
+}
+
+
+.resource-item {
+  width: 250px;
+}
+}
+
+@media (max-width: 992px) {
+.search-bar {
+  margin-left: 52px;
   margin-bottom: 20px;
+  margin-left: 0;
+}
+
+.search-bar input {
+  width: 94%;
+  padding: 10px;
+  border: 1px solid black;
   font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+
+.resource-list {
+  margin-left: 0;
+  margin-bottom: 40px;
 }
 
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+.resource-item {
+  width: 220px;
 }
-
-.card {
-  background: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 20px;
-  width: calc(33.333% - 20px); /* 3 cards per row, adjust as needed */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.card h2 {
-  margin-top: 0;
-  font-size: 20px;
-}
-
-.card p {
-  margin: 5px 0;
 }
 
 @media (max-width: 768px) {
-  .card {
-    width: calc(50% - 20px); /* 2 cards per row on smaller screens */
-  }
+.wellness-page {
+  top: 50px;
 }
 
-@media (max-width: 480px) {
-  .card {
-    width: 100%; /* 1 card per row on very small screens */
-  }
+
+.search-bar {
+  margin-left: 0;
+  margin-bottom: 15px;
+}
+
+.resource-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-left: 50px;
+  margin-bottom: 80px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.resource-item {
+  background-color: white;
+  border-radius: 20px;
+  border: none;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+}
+
+.resource-item h3 {
+  margin: 0;
+  font-size: 18px;
+  color: black;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-decoration: underline;
+  font-size: 16px;
+}
+
+.resource-item p {
+  font-size: 14px;
+}
+}
+
+@media (max-width: 576px) {
+.wellness-page {
+  top: 100px;
+}
+
+.search-bar input {
+  width: 100%;
+  font-size: 14px;
+}
+
+.resource-item {
+  width: 100%;
+  padding: 15px;
+}
+
+.resource-item h3 {
+  font-size: 14px;
+}
+
+.resource-item p {
+  font-size: 12px;
+}
+
 }

@@ -1,71 +1,70 @@
-import React, { useEffect, useState, useMemo } from 'react';
-
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import './Resources.css';
 
-const NutritionixComponent = () => {
-  const [data, setData] = useState([]);
-  const [error, setError] = useState(null);
+const Resources = () => {
   const [searchTerm, setSearchTerm] = useState('');
+  const [resources, setResources] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  const handleSearch = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const fetchResources = async () => {
+    try {
+      const response = await axios.get('http://localhost:3000/api/resources');
+      setResources(response.data);
+      setLoading(false);
+    } catch (err) {
+      setError('Error fetching data: ' + err.message);
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
-    // Initialize with API credentials from environment variables
-    nutritionix.init();
-
-    // Example usage: fetch nutrients
-    nutritionix.utils.nutrients()
-      .then(response => {
-        console.log('API Response:', response); // Log the response
-        setData(response || []);
-      })
-      .catch(err => {
-        setError(err);
-      });
+    fetchResources();
   }, []);
 
-  const filteredData = useMemo(() => {
-    const result = data.filter(item =>
-      item.usda_nutr_desc &&
-      item.usda_nutr_desc.toLowerCase().includes(searchTerm.toLowerCase().trim())
-    );
-    console.log('Filtered Data:', result); // Log the filtered data
-    return result;
-  }, [data, searchTerm]);
+  const filteredResources = resources.filter((resource) =>
+    resource.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
-  if (error) {
-    return <div>Error: {error.error}</div>;
+  if (loading) {
+    return <p>Loading...</p>;
   }
 
-  if (!data) {
-    return <div>Loading...</div>;
+  if (error) {
+    return <p>{error}</p>;
   }
 
   return (
-    <div className="nutritionix-container">
-      <h1>Nutrients Data</h1>
-      <input
-        type="text"
-        placeholder="Search nutrients..."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        className="search-bar"
-      />
-      <div className="card-container">
-        {filteredData.length > 0 ? (
-          filteredData.map((item, index) => (
-            <div key={index} className="card">
-              <h2>{item.usda_nutr_desc}</h2>
-              <p><strong>Unit:</strong> {item.unit}</p>
-              <p><strong>Protein:</strong> {item.usda_sr_order}g</p>
-              <p><strong>Carbohydrates:</strong> {item.carbohydrates}g</p>
-              <p><strong>Fat:</strong> {item.fat}g</p>
+    <div className="wellness-page">
+      <div className="search-bar">
+        <input
+          type="text"
+          placeholder="Search for a wellness resource..."
+          value={searchTerm}
+          onChange={handleSearch}
+        />
+      </div>
+  
+      <div className="resource-list">
+        {filteredResources.length > 0 ? (
+          filteredResources.map((resource) => (
+            <div key={resource.id} className="resource-item">
+              <h3>{resource.title}</h3>
+              <p className='category'><strong>Category:</strong> {resource.category}</p>
+              <p>{resource.description}</p>
             </div>
           ))
         ) : (
-          <p>No results found</p>
+          <p>No resources found</p>
         )}
       </div>
     </div>
   );
 };
 
-export default NutritionixComponent;
+export default Resources;
