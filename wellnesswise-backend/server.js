@@ -2,8 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import https from 'https';
-import fs from 'fs';
+import http from 'http';
 import userRoutes from './routes/userRoutes.js';
 import resourcesRoutes from './routes/resourcesRoutes.js';
 
@@ -33,11 +32,7 @@ app.use('/api/resources', resourcesRoutes);
 // Define the port
 const port = process.env.PORT || 3000;
 
-// Read SSL certificate and key from environment variables
-const key = fs.readFileSync(process.env.SSL_KEY_PATH);
-const cert = fs.readFileSync(process.env.SSL_CERT_PATH);
-
-// Create HTTPS server
-https.createServer({ key, cert }, app).listen(port, () => {
-  console.log(`HTTPS Server is running on port ${port}`);
+// Create HTTP server
+http.createServer(app).listen(port, () => {
+  console.log(`HTTP Server is running on port ${port}`);
 });
