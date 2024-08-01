@@ -60,6 +60,16 @@ word-spacing: 2px;
 font-size: 15px;
 }
 
+.visit_link {
+  letter-spacing: 2px;
+  font-size: 15px;
+  padding: auto;
+  margin: 0 auto;
+  color: #513125;
+  text-decoration: underline;
+
+}
+
 @media (max-width: 1200px) {
 .search-bar {
   margin-left: 20px;

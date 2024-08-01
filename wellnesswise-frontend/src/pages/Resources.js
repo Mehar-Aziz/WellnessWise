@@ -57,6 +57,11 @@ const Resources = () => {
               <h3>{resource.title}</h3>
               <p className='category'><strong>Category:</strong> {resource.category}</p>
               <p>{resource.description}</p>
+              
+                <a href={resource.link} target="_blank" rel="noopener noreferrer" className="visit_link">
+                  Visit
+                </a>
+             
             </div>
           ))
         ) : (
