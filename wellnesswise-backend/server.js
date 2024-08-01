@@ -5,6 +5,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 dotenv.config('.env');
 import userRoutes from './routes/userRoutes.js';
+import resourcesRoutes from './routes/resourcesRoutes.js';
 
 
 const app = express();
@@ -22,6 +23,8 @@ app.get('/api', (req, res) => {
   });
   //user route
 app.use('/api/users', userRoutes);
+//
+app.use('/api/resources', resourcesRoutes);
 
 
 
