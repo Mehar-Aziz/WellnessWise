@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo } from 'react';
-import nutritionix from '../services/fetchData';
+
 import './Resources.css';
 
 const NutritionixComponent = () => {
