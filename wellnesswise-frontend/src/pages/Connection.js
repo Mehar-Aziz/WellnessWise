@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Connection.css';
 import connectionimg from '../assets/undraw_online_re_x00h.svg'
 
-// Sample expert data
+
 const experts = [
   { id: 1, name: 'Dr. Jane Smith', specialty: 'Nutrition' },
   { id: 2, name: 'John Doe', specialty: 'Mental Health' },
@@ -28,11 +28,42 @@ const Connections = () => {
 
   const handleBookSession = () => {
     if (selectedExpert && sessionDate) {
-      //booking logic here
       alert(`Session booked with expert ID ${selectedExpert} on ${sessionDate}`);
     } else {
       alert('Please select an expert and choose a date.');
     }
+  };
+
+  const generateRoomName = (expertName) => {
+    return `WellnessApp-${expertName.replace(/\s+/g, '')}-${Math.random().toString(36).substring(7)}`;
+  };
+
+  const startVideoCall = () => {
+    if (!selectedExpert) {
+      alert('Please select an expert before starting a video call.');
+      return;
+    }
+
+    const expert = experts.find(e => e.id === parseInt(selectedExpert));
+    if (!expert) {
+      alert('Invalid expert selection.');
+      return;
+    }
+
+    const roomName = generateRoomName(expert.name);
+    const jitsiUrl = `https://meet.jit.si/${roomName}`;
+
+    const newWindow = window.open(jitsiUrl, '_blank', 'noopener,noreferrer');
+    
+ 
+    if (newWindow) {
+      newWindow.onload = function() {
+        newWindow.document.title = `Session with ${expert.name}`;
+      };
+    }
+
+ 
+    console.log(`Invite sent to ${expert.name} for room: ${roomName}`);
   };
 
   return (
@@ -40,7 +71,6 @@ const Connections = () => {
         backgroundImage: `linear-gradient(
           rgba(251, 247, 240, 1),
           rgba(251, 247, 240, 0.8)
-          
         ), url(${connectionimg})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center center'
@@ -76,8 +106,8 @@ const Connections = () => {
 
       <div className="video-chat-section">
         <h2>Video and Chat</h2>
-        <p>Want to Video Chat with Experts?</p>
-        <button onClick={() => alert('Video/Chat functionality not implemented yet.')}>
+        <p>Start a Video Chat with your selected Expert</p>
+        <button onClick={startVideoCall}>
           Start Video/Chat Session
         </button>
       </div>
