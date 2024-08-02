@@ -114,7 +114,7 @@ const Home = () => {
 </section>
 
             {/* About us */}
-            <section id="about-us" className="with-medical">
+            <section id="about-us" className="about">
                 <div className="about-container">
                     <div className="row-about">
                         <div className="col-lg-6 col-md-12 txtr">

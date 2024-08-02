@@ -264,7 +264,8 @@ textarea {
 
 .inner-title h2 {
   font-family: "Abel", sans-serif;
-  font-weight: 400;
+  background-color: #F4EDE5 ;
+  font-weight: 800;
   font-style: normal;
   font-size: 2.5rem;
   color: #513125;
@@ -302,6 +303,7 @@ textarea {
 background-color: #F4EDE5;
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   text-align: center;
+  margin-top: -10px;
   padding: 50px;
   opacity: 0; 
   transform: translateY(50px);
@@ -390,11 +392,11 @@ background-color: #F4EDE5;
   }
 }
 
-  /* ===================================== ABOUT ================================== */
+  /*about*/
 .about-container {
   margin-left: 60px;
 }
-.with-medical {
+.about {
     position: relative;
     top: -500px;
     background-color: #fbf7f0;
@@ -417,8 +419,9 @@ background-color: #F4EDE5;
 .txtr h4 {
   font-size: 32px;
   position: relative;
-  left: 300px;
+  text-align: center;
   margin-bottom: 20px; 
+  background-color: #F4EDE5;
   color: #513125;
   font-weight: 600;
 }
@@ -427,7 +430,8 @@ background-color: #F4EDE5;
   color: #513125;
   font-weight: 900;
   text-decoration: underline;
-  margin-left: 100px;
+  text-align: center;
+  margin-left: 10px;
 }
 
 .txtr p span {
@@ -494,6 +498,7 @@ background-color: #F4EDE5;
 
 .contact-us-single h2 {
     text-align: center; 
+    background-color: #F4EDE5;
     color: #513125;
     margin-bottom: 20px;
     font-weight: 600;
