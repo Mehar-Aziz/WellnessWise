@@ -2,6 +2,8 @@
 
 **WellnessWise** is a responsive web application designed to enhance wellness and health. The platform connects users with wellness experts, offers personalized advice, and provides interactive features such as video conferencing and wellness resources.
 
+![Application Screenshot](assets/Screenshot%202024-08-02%20120932.png)
+
 ## Features
 - **Expert Connections**: Book sessions and interact with wellness experts through video conferencing.
 - **Personalized Advice**: Receive tailored wellness recommendations based on user profiles and goals.
