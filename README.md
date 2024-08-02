@@ -17,9 +17,7 @@
 - **React**: For building the dynamic user interface.
 - **React Router DOM**: For managing application navigation and routing.
 - **Axios**: For making HTTP requests to the backend.
-- **Sass**: For advanced styling and responsiveness.
 - **Prop-Types**: For type-checking React component props.
-- **Nutritionix API**: For integrating nutrition-related services.
 - **Nodemailer**: For sending emails from the application.
 - **Crypto**: For handling cryptographic functions.
 - **React Testing Library**: For testing React components.
@@ -60,11 +58,11 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/wellnesswise-backend.git
+   git clone https://github.com/Mehar-Aziz/WellnessWise.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd wellnesswise-backend
+   cd wellnesswise-frontend
    ```
 3. Install dependencies:
    ```bash
