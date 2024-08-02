@@ -52,6 +52,19 @@
     margin-top: 5px;
     box-sizing: border-box;
   }
+
+  .preferences-form input[type="number"],
+  .preferences-form select {
+    padding: 10px;
+    background-color: #F4EDE5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 5px;
+    box-sizing: border-box;
+  }
+  
   
   .preferences-form button {
     padding: 10px 20px;

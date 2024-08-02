@@ -94,6 +94,17 @@
   height: 100%;
 }
 
+.editbtn {
+  position: relative;
+  left: -490px;
+  top: 10px;
+  height: 30px;
+  width: 30px;
+  background-color: #513125;
+  color: white;
+  border: none;
+}
+
 @media (max-width: 1200px) {
   .user-profile h1 {
     left: 300px;
